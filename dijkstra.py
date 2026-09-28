@@ -28,16 +28,11 @@ def build_graph(routes):
         graph[frm].append((to, cost, ttime, dist, route_type))
     return graph
 
+
 def run_dijkstra(graph_or_routes, origin, destination, locations=None):
-    """
-    graph_or_routes: either pre-built graph dict or list of routes
-    origin, destination: location names
-    locations: optional locations list (not used in Dijkstra but kept for signature consistency)
-    Returns dict with path, total_cost, total_time, total_distance, nodes_explored, execution_time_ms
-    """
+  
     start = time.perf_counter()
 
-    # Determine if first arg is graph dict or routes list
     if isinstance(graph_or_routes, dict):
         graph = graph_or_routes
     elif isinstance(graph_or_routes, list):
@@ -45,16 +40,14 @@ def run_dijkstra(graph_or_routes, origin, destination, locations=None):
     else:
         graph = {}
 
-    # Also ensure locations param may be actually graph if called differently
-    # If locations is list and graph is empty, fallback
-    # Normalize origin/destination strings
+   
     origin = str(origin).strip()
     destination = str(destination).strip()
 
     # Dijkstra structures
     pq = []
     heapq.heappush(pq, (0, origin, [origin], 0, 0))  # cost, node, path, time, distance
-    visited = {}  # node -> best cost
+    visited = {}  
     nodes_explored = []
     best_path = None
     best_cost = None
