@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RouteWise - Logistics Decision Support System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#f59e0b"/><path d="M7 14L12 19L21 9" stroke="#0a0e1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 7V7.5M14 20.5V21M7 14H7.5M20.5 14H21" stroke="#0a0e1a" stroke-width="1" opacity="0.0"/></svg>
+                </div>
+                <span class="logo-text">RouteWise</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/shipment" class="nav-link">Analysis</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Simulation-Based Decision Support</div>
+                <h1 class="hero-title">RouteWise</h1>
+                <p class="hero-subtitle">Logistics Decision Support System</p>
+                <p class="hero-desc">Intelligent recovery decision recommendations for shipment disruptions</p>
+                <p class="hero-desc-sub">Four algorithms working in sequence — CSP, Dijkstra, A* and Hill Climbing — to find your optimal recovery plan when shipments face unexpected incidents.</p>
+                <a href="/shipment" class="btn-primary hero-btn">Start Analysis <span class="btn-arrow">→</span></a>
+                <div class="hero-stats">
+                    <div class="hero-stat"><span class="stat-num">4</span><span class="stat-label">Algorithms</span></div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat"><span class="stat-num">10</span><span class="stat-label">Locations</span></div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat"><span class="stat-num">40+</span><span class="stat-label">Routes</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">A four-stage pipeline that filters, searches and decides</p>
+                <div class="feature-grid">
+                    <div class="card feature-card">
+                        <div class="feature-icon" style="background: rgba(245,158,11,0.12); color:#f59e0b;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><path d="M12 22C17.5 22 22 17.5 22 12S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10z"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3>Smart Filtering</h3>
+                        <p>CSP removes impossible options automatically by checking vehicle capacity, deadline, availability, route status and budget.</p>
+                        <div class="feature-tag">Step 1 — CSP</div>
+                    </div>
+                    <div class="card feature-card">
+                        <div class="feature-icon" style="background: rgba(16,185,129,0.12); color:#10b981;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg>
+                        </div>
+                        <h3>Dual Route Analysis</h3>
+                        <p>Dijkstra and A* find the best paths simultaneously — lowest-cost vs most destination-efficient — exploring the network in different ways.</p>
+                        <div class="feature-tag">Step 2 & 3 — Dijkstra + A*</div>
+                    </div>
+                    <div class="card feature-card">
+                        <div class="feature-icon" style="background: rgba(245,158,11,0.12); color:#f59e0b;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7a2.5 2.5 0 0 0 0-3.5a2.5 2.5 0 0 0-3.5 0L12 12l-3.5-3.5a2.5 2.5 0 0 0-3.5 0a2.5 2.5 0 0 0 0 3.5l7 7z"/><path d="M12 12V3"/><path d="M12 12l-3.5 3.5M12 12l3.5 3.5"/></svg>
+                        </div>
+                        <h3>Optimal Decision</h3>
+                        <p>Hill Climbing selects the best overall recovery plan using a cost-vs-time threshold rule, balancing expense against delivery speed.</p>
+                        <div class="feature-tag">Step 4 — Hill Climbing</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Algorithm Pipeline Visual -->
+        <section class="pipeline-visual">
+            <div class="container">
+                <div class="pipeline-card card">
+                    <div class="pipeline-steps">
+                        <div class="pipeline-step"><span class="step-num">1</span><span class="step-label">Generate<br>Recovery Options</span></div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step"><span class="step-num csp">2</span><span class="step-label">CSP<br>Filtering</span></div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step"><span class="step-num dijkstra">3</span><span class="step-label">Dijkstra<br>Lowest Cost</span></div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step"><span class="step-num astar">4</span><span class="step-label">A*<br>Efficient</span></div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step"><span class="step-num hill">5</span><span class="step-label">Hill Climbing<br>Decision</span></div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step highlight"><span class="step-num result">✓</span><span class="step-label">Recommended<br>Plan</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card card">
+                    <h2>Ready to optimize your logistics?</h2>
+                    <p>Run a full simulation in under a minute. No live data needed — all routes and vehicles are predefined.</p>
+                    <a href="/shipment" class="btn-primary">Start Analysis</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>RouteWise — Logistics Decision Support System • Simulation-Based • Built with Flask + Python</p>
+        </div>
+    </footer>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

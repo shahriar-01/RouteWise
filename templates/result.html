@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - RouteWise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#f59e0b"/><path d="M7 14L12 19L21 9" stroke="#0a0e1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="logo-text">RouteWise</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/shipment" class="nav-link active">Analysis</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container result-page">
+        <div class="progress-bar">
+            <div class="progress-step completed"><span>✓</span><label>Shipment</label></div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step completed"><span>✓</span><label>Incident</label></div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step completed"><span>✓</span><label>Analysis</label></div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step active"><span>4</span><label>Result</label></div>
+        </div>
+
+        <!-- Warnings / Recommendations banner (only for financial warnings / loss) -->
+        {% if results.warnings and results.warnings|length > 0 and (results.financial.budget_exceeds_payment or results.financial.recovery_exceeds_payment or results.financial.profit_status=='Loss') %}
+        <div class="card" style="border-left:4px solid {% if results.financial.recovery_exceeds_payment or results.financial.budget_exceeds_payment %}#ef4444{% else %}#f59e0b{% endif %}; margin-bottom:1.2rem;">
+            <h3 style="margin:0 0 0.6rem; font-size:1rem; color:{% if results.financial.recovery_exceeds_payment or results.financial.budget_exceeds_payment %}#ef4444{% else %}#f59e0b{% endif %};">
+                {% if results.financial.budget_exceeds_payment or results.financial.recovery_exceeds_payment %}⚠ Financial Warning — Recovery Budget vs Total Payment{% else %}⚠ Recovery Results in Loss{% endif %}
+            </h3>
+            <ul style="margin:0; padding-left:1.2rem; color:var(--text-secondary); font-size:0.9rem; line-height:1.6;">
+                {% for w in results.warnings %}<li>{{ w }}</li>{% endfor %}
+            </ul>
+            {% if results.recommendations and results.recommendations|length>0 %}
+            <div style="margin-top:0.9rem; padding:0.8rem 1rem; background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.25); border-radius:8px;">
+                <strong style="color:#f59e0b; font-size:0.9rem;">Recommendations:</strong>
+                <ul style="margin:0.4rem 0 0; padding-left:1.2rem; color:var(--text-secondary); font-size:0.88rem; line-height:1.6;">
+                    {% for r in results.recommendations %}<li>{{ r }}</li>{% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        <!-- Budget vs Payment inline check (always visible) -->
+        {% if results.financial.budget_exceeds_payment %}
+        <div class="alert alert-error" style="background:rgba(239,68,68,0.12); border-color:rgba(239,68,68,0.35); color:#fecaca;">Recovery Budget (BDT {{ "{:,.0f}".format(results.financial.recovery_budget_bdt) }}) exceeds Total Payment Received (BDT {{ "{:,.0f}".format(results.financial.revenue) }}) — violates Recovery Budget ≤ Total Payment rule. Output is constrained and shows recommendations above.</div>
+        {% elif results.financial.recovery_exceeds_payment %}
+        <div class="alert alert-error" style="background:rgba(239,68,68,0.12); border-color:rgba(239,68,68,0.35); color:#fecaca;">Recovery Cost (BDT {{ "{:,.0f}".format(results.financial.recovery_cost) }}) exceeds Total Payment Received (BDT {{ "{:,.0f}".format(results.financial.revenue) }}) — even the cheapest recovery exceeds revenue. See recommendations.</div>
+        {% endif %}
+
+        <!-- Section 1: Recommended Decision -->
+        <section class="result-section">
+            <div class="card recommended-card">
+                <div class="recommended-header">
+                    <div>
+                        <div class="badge-top">Recommended Decision</div>
+                        <h1>Optimal Recovery Plan</h1>
+                        <p class="recommended-route-path">
+                            {% set path = results.recommended_route.path %}
+                            {% if path and path|length > 0 %}
+                                {{ path|join("  →  ") }}
+                            {% else %}
+                                {{ results.recommended_route.route_description }}
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="recommended-meta">
+                        {% set risk = results.recommended_route.risk_level or 'Medium' %}
+                        <span class="badge {% if risk=='Low' %}badge-low{% elif risk=='High' %}badge-high{% else %}badge-medium{% endif %}">{{ risk }} Risk</span>
+                        <span class="selected-badge">Selected by {{ results.hill_climbing_decision.selected or results.recommended_route.selected_by }}</span>
+                    </div>
+                </div>
+                <div class="recommended-grid">
+                    <div class="metric-box">
+                        <span class="metric-label">Recovery Cost</span>
+                        <span class="metric-value">BDT {{ "{:,.0f}".format(results.recommended_route.cost or results.recommended_route.total_cost) }}</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-label">Delivery Time</span>
+                        <span class="metric-value">{{ "%.1f"|format(results.recommended_route.total_time or results.recommended_route.time) }} hrs <small>({{ "%.2f"|format(results.financial.delivery_time_days) }} days)</small></span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-label">Distance</span>
+                        <span class="metric-value">{{ "{:,.0f}".format(results.recommended_route.distance or results.recommended_route.total_distance or 0) }} km</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-label">Final Profit</span>
+                        <span class="metric-value {% if results.financial.final_profit >=0 %}profit-positive{% else %}profit-negative{% endif %}">BDT {{ "{:,.0f}".format(results.financial.final_profit) }}</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Why This Was Recommended -->
+        <section class="result-section">
+            <h2 class="section-title-sm">Why This Was Recommended</h2>
+            <div class="card">
+                <ul class="reasons-list">
+                    <li>
+                        <span class="reason-icon" style="color:#10b981;">✓</span>
+                        <div>
+                            <strong>Vehicle Capacity Sufficient</strong>
+                            <p>Selected route vehicle capacity meets cargo weight of {{ results.shipment.cargo_weight_tons }} tons (CSP checked all options and removed those with insufficient capacity).</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="reason-icon" style="color:{% if results.financial.delivery_time_days <= results.shipment.delivery_deadline_days %}#10b981{% else %}#ef4444{% endif %};>{% if results.financial.delivery_time_days <= results.shipment.delivery_deadline_days %}✓{% else %}✕{% endif %}</span>
+                        <div>
+                            <strong>Deadline {% if results.financial.delivery_time_days <= results.shipment.delivery_deadline_days %}Met{% else %}Exceeded{% endif %}</strong>
+                            <p>Delivery in {{ "%.2f"|format(results.financial.delivery_time_days) }} days vs deadline {{ results.shipment.delivery_deadline_days }} days. {% if results.financial.delay_penalty>0 %} Delay penalty BDT {{ "{:,.0f}".format(results.financial.delay_penalty) }} applied. {% else %} No delay penalty. {% endif %}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="reason-icon" style="color:#10b981;">✓</span>
+                        <div>
+                            <strong>Route Avoids Blocked Segments</strong>
+                            <p>CSP removed {{ results.csp_metrics.removed }} option(s) that used blocked roads (blocked=1). Selected path uses only open routes.{% if results.incident_type=="Road Blocked" %} Direct road {{ results.shipment.origin }}→{{ results.shipment.destination }} was excluded — different route returned.{% endif %}</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="reason-icon" style="color:#f59e0b;">◐</span>
+                        <div>
+                            <strong>Cost Difference vs Alternative — Relative % Threshold</strong>
+                            <p>Percentage Difference <strong>{{ "%.2f"|format(results.hill_climbing_decision.percentage_difference or results.hill_result.percentage_difference or 0) }}%</strong>. Classification <strong>{{ results.hill_climbing_decision.classification }}</strong> (threshold <strong>5%</strong>). {% if (results.hill_climbing_decision.percentage_difference or 0) < 5 %}Small difference → faster route selected.{% else %}Large difference → cheaper route selected.{% endif %} Rule: <em>{{ results.hill_climbing_decision.rule_applied }}</em></p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="reason-icon" style="color:{% if results.financial.recovery_cost <= results.shipment.recovery_budget_bdt|float and not results.financial.recovery_exceeds_payment %}#10b981{% else %}#ef4444{% endif %};">{% if results.financial.recovery_cost <= results.shipment.recovery_budget_bdt|float and not results.financial.recovery_exceeds_payment %}✓{% else %}✕{% endif %}</span>
+                        <div>
+                            <strong>Budget & Payment Check (Recovery Budget ≤ Total Payment)</strong>
+                            <p>Recovery cost BDT {{ "{:,.0f}".format(results.recommended_route.cost) }} {% if results.financial.recovery_cost <= results.shipment.recovery_budget_bdt|float %}within{% else %}exceeds{% endif %} budget BDT {{ "{:,.0f}".format(results.shipment.recovery_budget_bdt|float) }} and total payment BDT {{ "{:,.0f}".format(results.financial.revenue) }}. {% if results.financial.budget_exceeds_payment %} Budget itself exceeds payment — violates rule. {% elif results.financial.recovery_exceeds_payment %} Recovery exceeds payment — loss unavoidable at this budget. {% else %} ✓ Compliant — output does not exceed budget/payment. {% endif %}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 3: Hill Climbing Decision Breakdown -->
+        <section class="result-section">
+            <h2 class="section-title-sm">Hill Climbing Decision Breakdown — Relative Percentage 5%</h2>
+            <div class="decision-grid">
+                <div class="card decision-card {% if results.hill_climbing_decision.selected=='Dijkstra' %}selected-card{% endif %}">
+                    <div class="decision-header">
+                        <h3>Dijkstra Route</h3>
+                        <span class="algo-badge dijkstra-badge">Lowest Cost</span>
+                    </div>
+                    <p class="decision-path">{{ results.dijkstra_route.path|join(" → ") }}</p>
+                    <div class="decision-metrics">
+                        <div><span>Cost</span><strong>BDT {{ "{:,.0f}".format(results.dijkstra_route.cost or results.dijkstra_route.total_cost) }}</strong></div>
+                        <div><span>Time</span><strong>{{ "%.1f"|format(results.dijkstra_route.time or results.dijkstra_route.total_time) }} hrs</strong></div>
+                        <div><span>Nodes Explored</span><strong>{{ results.dijkstra_metrics.nodes_explored }}</strong></div>
+                    </div>
+                    {% if results.hill_climbing_decision.selected=='Dijkstra' %}<div class="selected-ribbon">Selected</div>{% endif %}
+                </div>
+                <div class="card decision-card {% if results.hill_climbing_decision.selected=='A*' %}selected-card{% endif %}">
+                    <div class="decision-header">
+                        <h3>A* Route</h3>
+                        <span class="algo-badge astar-badge">Most Efficient</span>
+                    </div>
+                    <p class="decision-path">{{ results.astar_route.path|join(" → ") }}</p>
+                    <div class="decision-metrics">
+                        <div><span>Cost</span><strong>BDT {{ "{:,.0f}".format(results.astar_route.cost or results.astar_route.total_cost) }}</strong></div>
+                        <div><span>Time</span><strong>{{ "%.1f"|format(results.astar_route.time or results.astar_route.total_time) }} hrs</strong></div>
+                        <div><span>Nodes Explored</span><strong>{{ results.astar_metrics.nodes_explored }}</strong></div>
+                    </div>
+                    {% if results.hill_climbing_decision.selected=='A*' %}<div class="selected-ribbon">Selected</div>{% endif %}
+                </div>
+            </div>
+            <div class="card decision-summary">
+                <div class="decision-summary-grid">
+                    <div><span class="summary-label">Cost Difference (abs)</span><strong>BDT {{ "{:,.0f}".format(results.hill_climbing_decision.cost_difference) }}</strong></div>
+                    <div><span class="summary-label">Percentage Difference</span><strong>{{ "%.2f"|format(results.hill_climbing_decision.percentage_difference or results.hill_result.percentage_difference or 0) }}%</strong></div>
+                    <div><span class="summary-label">Threshold</span><strong>5%</strong></div>
+                    <div><span class="summary-label">Classification</span><strong class="badge {% if results.hill_climbing_decision.classification=='small' %}badge-low{% else %}badge-high{% endif %}" style="display:inline-block; padding:4px 10px; font-size:13px;">{{ results.hill_climbing_decision.classification|capitalize }}</strong></div>
+                    <div><span class="summary-label">Decision</span><strong style="color:#f59e0b;">{{ results.hill_climbing_decision.selected }} Selected</strong></div>
+                </div>
+                <p class="decision-reason">{{ results.hill_climbing_decision.reason }} — Rule: if percentage &lt; 5% choose faster (time), else choose cheaper (cost).</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Financial Summary -->
+        <section class="result-section">
+            <h2 class="section-title-sm">Financial Summary — Revenue = Total Payment Received</h2>
+            <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:1rem;">Final Profit = Revenue − Original Cost − Recovery Cost − Damage Cost − Delay Penalty, where Revenue = Total Payment Received.</p>
+            <div class="card">
+                <div class="financial-grid">
+                    <div class="fin-item"><span>Revenue <small>(Total Payment Received)</small></span><strong style="color:#10b981;">+ BDT {{ "{:,.0f}".format(results.financial.revenue) }}</strong></div>
+                    <div class="fin-item"><span>Original Cost</span><strong style="color:#ef4444;">− BDT {{ "{:,.0f}".format(results.financial.original_cost) }}</strong></div>
+                    <div class="fin-item"><span>Recovery Cost {% if results.financial.recovery_exceeds_payment %}<small style="color:#ef4444;">⚠ exceeds revenue</small>{% elif results.financial.recovery_cost > results.shipment.recovery_budget_bdt|float %}<small style="color:#f59e0b;">⚠ over budget</small>{% endif %}</span><strong style="color:{% if results.financial.recovery_exceeds_payment %}#ef4444{% else %}#ef4444{% endif %};">− BDT {{ "{:,.0f}".format(results.financial.recovery_cost) }}</strong></div>
+                    <div class="fin-item"><span>Damage Cost {% if results.financial.damage_cost>0 %}(2% cargo){% endif %}</span><strong style="color:{% if results.financial.damage_cost>0 %}#ef4444{% else %}#9ca3af{% endif %};">− BDT {{ "{:,.0f}".format(results.financial.damage_cost) }}</strong></div>
+                    <div class="fin-item"><span>Delay Penalty {% if results.financial.delay_penalty>0 %}(5000/day){% endif %}</span><strong style="color:{% if results.financial.delay_penalty>0 %}#ef4444{% else %}#9ca3af{% endif %};">− BDT {{ "{:,.0f}".format(results.financial.delay_penalty) }}</strong></div>
+                    <div class="fin-item total"><span>Final Profit</span><strong class="{% if results.financial.final_profit>=0 %}profit-positive{% else %}profit-negative{% endif %}" style="font-size:1.4rem;">BDT {{ "{:,.0f}".format(results.financial.final_profit) }}</strong></div>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-top:1rem; font-size:0.85rem; color:var(--text-secondary);">
+                    <div>Total Payment Received: <strong style="color:#f9fafb;">BDT {{ "{:,.0f}".format(results.financial.revenue) }}</strong></div>
+                    <div>Recovery Budget: <strong style="color:{% if results.financial.budget_exceeds_payment %}#ef4444{% else %}#f9fafb{% endif %};">BDT {{ "{:,.0f}".format(results.financial.recovery_budget_bdt or results.shipment.recovery_budget_bdt|float) }}</strong>{% if results.financial.budget_exceeds_payment %} <span style="color:#ef4444;">✕ exceeds payment</span>{% else %} ✓ ≤ payment{% endif %}</div>
+                </div>
+                <div class="profit-indicator {% if results.financial.final_profit>=0 %}positive{% else %}negative{% endif %}">
+                    {% if results.financial.final_profit>=0 %}✓ Profitable recovery — Revenue exceeds all costs{% else %}✕ Net loss on this shipment — consider recommendations above{% endif %}
+                </div>
+                <p style="color:var(--text-secondary); font-size:0.78rem; margin-top:0.7rem; text-align:center;">Formula verified: {{ "{:,.0f}".format(results.financial.revenue) }} − {{ "{:,.0f}".format(results.financial.original_cost) }} − {{ "{:,.0f}".format(results.financial.recovery_cost) }} − {{ "{:,.0f}".format(results.financial.damage_cost) }} − {{ "{:,.0f}".format(results.financial.delay_penalty) }} = {{ "{:,.0f}".format(results.financial.final_profit) }}</p>
+            </div>
+        </section>
+
+        <!-- Evaluation Criteria: 4 Required Metrics -->
+        <section class="result-section">
+            <h2 class="section-title-sm">Evaluation Criteria</h2>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.2rem;">Four metrics measured during the pipeline — real execution time, solution quality, search efficiency, and Hill Climbing convergence behavior (relative 5% threshold).</p>
+            <div class="evaluation-grid">
+                <div class="card eval-card">
+                    <div class="eval-header">
+                        <span class="eval-number">1</span>
+                        <h3>Execution Time</h3>
+                        <span class="eval-badge">time.perf_counter() ms</span>
+                    </div>
+                    <p class="eval-desc">Real wall-clock time per algorithm (measured before/after each call).</p>
+                    <div class="eval-metrics">
+                        <div class="eval-row"><span>CSP</span><strong>{{ "%.3f"|format(results.csp_metrics.execution_time_ms) }} ms</strong><small>{{ results.csp_metrics.total_checked }} checked</small></div>
+                        <div class="eval-row"><span>Dijkstra</span><strong>{{ "%.3f"|format(results.dijkstra_metrics.execution_time_ms) }} ms</strong><small>{{ results.dijkstra_metrics.nodes_explored }} nodes</small></div>
+                        <div class="eval-row"><span>A*</span><strong>{{ "%.3f"|format(results.astar_metrics.execution_time_ms) }} ms</strong><small>{{ results.astar_metrics.nodes_explored }} nodes</small></div>
+                        <div class="eval-row"><span>Hill Climbing</span><strong>{{ "%.3f"|format(results.hill_metrics.execution_time_ms) }} ms</strong><small>2 candidates, {{ "%.2f"|format(results.hill_metrics.percentage_difference or results.hill_climbing_decision.percentage_difference or 0) }}% diff</small></div>
+                        <div class="eval-row total"><span>Total</span><strong>{{ "%.3f"|format(results.evaluation.total_execution_time_ms if results.evaluation else results.csp_metrics.execution_time_ms + results.dijkstra_metrics.execution_time_ms + results.astar_metrics.execution_time_ms + results.hill_metrics.execution_time_ms) }} ms</strong><small>sum of 4</small></div>
+                    </div>
+                    <p class="eval-note">→ See bar chart below for visual comparison.</p>
+                </div>
+
+                <div class="card eval-card">
+                    <div class="eval-header">
+                        <span class="eval-number">2</span>
+                        <h3>Solution Quality</h3>
+                        <span class="eval-badge" style="background: rgba(16,185,129,0.15); color:#10b981; border-color: rgba(16,185,129,0.3);">Best Plan</span>
+                    </div>
+                    <p class="eval-desc">Quality of the selected recovery plan vs. cheapest alternative (relative %).</p>
+                    <div class="eval-metrics" style="gap: 0.6rem;">
+                        <div class="eval-row"><span>Selected Route</span><strong style="font-size:0.85rem; text-align:right; max-width: 180px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="{{ results.recommended_route.path|join(' → ') }}">{{ results.recommended_route.path|join(' → ') }}</strong></div>
+                        <div class="eval-row"><span>Recovery Cost</span><strong>BDT {{ "{:,.0f}".format(results.recommended_route.cost or results.recommended_route.total_cost) }}</strong></div>
+                        <div class="eval-row"><span>Expected Time</span><strong>{{ "%.1f"|format(results.recommended_route.total_time or results.recommended_route.time) }} hrs ({{ "%.2f"|format(results.financial.delivery_time_days) }} days)</strong></div>
+                        <div class="eval-row"><span>Percentage Diff</span><strong>{{ "%.2f"|format(results.hill_climbing_decision.percentage_difference or results.hill_result.percentage_difference or 0) }}% (BDT {{ "{:,.0f}".format(results.hill_climbing_decision.cost_difference) }})</strong><small>{{ results.hill_climbing_decision.classification }}</small></div>
+                        <div class="eval-row"><span>Decision Basis</span><strong style="font-size:0.82rem; text-align:right;">{{ results.hill_climbing_decision.rule_applied }}</strong></div>
+                        <div class="eval-row"><span>Risk Level</span><strong><span class="badge {% if results.recommended_route.risk_level=='Low' %}badge-low{% elif results.recommended_route.risk_level=='High' %}badge-high{% else %}badge-medium{% endif %}" style="font-size:11px;">{{ results.recommended_route.risk_level }}</span></strong></div>
+                    </div>
+                </div>
+
+                <div class="card eval-card">
+                    <div class="eval-header">
+                        <span class="eval-number">3</span>
+                        <h3>Efficiency</h3>
+                        <span class="eval-badge">Nodes + Filtering</span>
+                    </div>
+                    <p class="eval-desc">How efficiently each search explored the graph and filtered options.</p>
+                    <div class="eval-metrics">
+                        <div class="eval-row"><span>Dijkstra Nodes</span><strong>{{ results.dijkstra_metrics.nodes_explored }}</strong><small>explored</small></div>
+                        <div class="eval-row"><span>A* Nodes</span><strong>{{ results.astar_metrics.nodes_explored }}</strong><small>explored</small></div>
+                        <div class="eval-row"><span>Heuristic Gain</span><strong style="color: {% if results.evaluation.efficiency.reduction_percent is defined and results.evaluation.efficiency.reduction_percent>0 %}#10b981{% else %}#9ca3af{% endif %};">{% if results.evaluation and results.evaluation.efficiency.reduction_percent >0 %}-{{ results.evaluation.efficiency.reduction_percent }}% fewer{% else %}similar{% endif %}</strong><small>vs Dijkstra</small></div>
+                        <div class="eval-row"><span>CSP Checked</span><strong>{{ results.csp_metrics.total_checked }}</strong><small>{{ results.csp_metrics.removed }} removed</small></div>
+                        <div class="eval-row"><span>CSP Passed</span><strong style="color:#10b981;">{{ results.csp_metrics.passed }}</strong><small>feasible (1000 routes expanded)</small></div>
+                    </div>
+                    <p class="eval-note">A* uses <code>f(n)=g(n)+h(n)</code> with Euclidean×300 → fewer expansions. See Nodes chart.</p>
+                </div>
+
+                <div class="card eval-card">
+                    <div class="eval-header">
+                        <span class="eval-number">4</span>
+                        <h3>Convergence Behavior</h3>
+                        <span class="eval-badge">Hill Climbing 5%</span>
+                    </div>
+                    <p class="eval-desc">Deterministic relative-percentage rule comparing two candidates (no loop).</p>
+                    <div class="eval-metrics">
+                        <div class="eval-row"><span>Dijkstra Cost</span><strong>BDT {{ "{:,.0f}".format(results.hill_climbing_decision.dijkstra_cost or results.dijkstra_route.cost or 0) }}</strong><small>cheaper</small></div>
+                        <div class="eval-row"><span>A* Cost</span><strong>BDT {{ "{:,.0f}".format(results.hill_climbing_decision.astar_cost or results.astar_route.cost or 0) }}</strong><small>efficient</small></div>
+                        <div class="eval-row"><span>Percentage Diff</span><strong>{{ "%.2f"|format(results.hill_climbing_decision.percentage_difference or results.hill_result.percentage_difference or 0) }}%</strong><small>abs diff {{ "{:,.0f}".format(results.hill_climbing_decision.cost_difference) }}</small></div>
+                        <div class="eval-row"><span>Classification</span><strong><span class="badge {% if results.hill_climbing_decision.classification=='small' %}badge-low{% else %}badge-high{% endif %}" style="font-size:11px;">{{ results.hill_climbing_decision.classification }}</span></strong><small>&lt;5% → faster, ≥5% → cheaper</small></div>
+                        <div class="eval-row"><span>Selected</span><strong style="color:#f59e0b;">{{ results.hill_climbing_decision.selected }}</strong><small>{{ results.hill_climbing_decision.rule_applied }}</small></div>
+                    </div>
+                    <p class="eval-note">Rule: &lt;5% → faster route, ≥5% → cheaper route.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Algorithm Performance -->
+        <section class="result-section">
+            <h2 class="section-title-sm">Algorithm Performance</h2>
+            <div class="charts-grid">
+                <div class="card chart-card">
+                    <h4>Algorithm Execution Time (ms)</h4>
+                    <div class="chart-wrap"><canvas id="chartTime"></canvas></div>
+                </div>
+                <div class="card chart-card">
+                    <h4>Nodes Explored During Search</h4>
+                    <div class="chart-wrap"><canvas id="chartNodes"></canvas></div>
+                    <p class="chart-note">A* explored {{ results.astar_metrics.nodes_explored }} nodes vs Dijkstra {{ results.dijkstra_metrics.nodes_explored }} — heuristic reduced exploration by {{ results.evaluation.efficiency.reduction_percent if results.evaluation else 0 }}%.</p>
+                </div>
+                <div class="card chart-card">
+                    <h4>CSP Constraint Filtering</h4>
+                    <div class="chart-wrap"><canvas id="chartCSP"></canvas></div>
+                </div>
+                <div class="card chart-card">
+                    <h4>Route Comparison: Cost and Time</h4>
+                    <div class="chart-wrap"><canvas id="chartQuality"></canvas></div>
+                </div>
+            </div>
+            <div class="card metrics-table-card">
+                <h4>Detailed Metrics — 5% Relative Threshold</h4>
+                <table class="metrics-table">
+                    <thead><tr><th>Algorithm</th><th>Time (ms)</th><th>Key Metric</th><th>Result</th></tr></thead>
+                    <tbody>
+                        <tr><td>CSP</td><td>{{ "%.3f"|format(results.csp_metrics.execution_time_ms) }}</td><td>{{ results.csp_metrics.total_checked }} checked, {{ results.csp_metrics.removed }} removed, {{ results.csp_metrics.passed }} passed</td><td>{{ results.csp_metrics.passed }} feasible</td></tr>
+                        <tr><td>Dijkstra</td><td>{{ "%.3f"|format(results.dijkstra_metrics.execution_time_ms) }}</td><td>{{ results.dijkstra_metrics.nodes_explored }} nodes explored</td><td>{{ results.dijkstra_route.path|join(" → ") }}</td></tr>
+                        <tr><td>A*</td><td>{{ "%.3f"|format(results.astar_metrics.execution_time_ms) }}</td><td>{{ results.astar_metrics.nodes_explored }} nodes explored</td><td>{{ results.astar_route.path|join(" → ") }}</td></tr>
+                        <tr><td>Hill Climbing</td><td>{{ "%.3f"|format(results.hill_metrics.execution_time_ms) }}</td><td>2 candidates, {{ "%.2f"|format(results.hill_metrics.percentage_difference or results.hill_climbing_decision.percentage_difference or 0) }}% diff (BDT {{ "{:,.0f}".format(results.hill_metrics.cost_difference or results.hill_climbing_decision.cost_difference) }}, threshold 5%)</td><td>{{ results.hill_metrics.decision or results.hill_climbing_decision.selected }} ({{ results.hill_climbing_decision.classification }})</td></tr>
+                    </tbody>
+                    <tfoot><tr><td><strong>Total</strong></td><td><strong>{{ "%.3f"|format(results.evaluation.total_execution_time_ms if results.evaluation else results.csp_metrics.execution_time_ms + results.dijkstra_metrics.execution_time_ms + results.astar_metrics.execution_time_ms + results.hill_metrics.execution_time_ms) }}</strong></td><td></td><td></td></tr></tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 6: All Feasible Options Comparison -->
+        <section class="result-section">
+            <h2 class="section-title-sm">All Feasible Options Comparison — Profit via Total Payment</h2>
+            <div class="card table-card">
+                <div class="table-wrap">
+                    <table class="options-table">
+                        <thead>
+                            <tr><th>Option</th><th>Vehicle</th><th>Route</th><th>Cost (BDT)</th><th>Time (days)</th><th>Risk</th><th>Profit (BDT)</th></tr>
+                        </thead>
+                        <tbody>
+                            {% for opt in results.financial.comparison or results.feasible_comparison %}
+                            <tr class="{% if loop.first and opt.estimated_cost_bdt == results.financial.recovery_cost %}highlight-row{% endif %}">
+                                <td><strong>{{ opt.option_id }}</strong></td>
+                                <td>{{ opt.vehicle_id }}</td>
+                                <td style="max-width:260px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="{{ opt.route_description }}">{{ opt.route_description }}</td>
+                                <td>{{ "{:,.0f}".format(opt.estimated_cost_bdt) }}</td>
+                                <td>{{ opt.estimated_time_days }}</td>
+                                <td><span class="badge {% if opt.risk_level=='Low' %}badge-low{% elif opt.risk_level=='High' %}badge-high{% else %}badge-medium{% endif %}" style="font-size:11px; padding:3px 8px;">{{ opt.risk_level }}</span></td>
+                                <td class="{% if opt.final_profit>=0 %}profit-positive{% else %}profit-negative{% endif %}">{{ "{:,.0f}".format(opt.final_profit) }}</td>
+                            </tr>
+                            {% endfor %}
+                            {% if not results.financial.comparison and results.feasible_options %}
+                                {% for opt in results.feasible_options %}
+                                <tr>
+                                    <td>{{ opt.option_id }}</td>
+                                    <td>{{ opt.vehicle_id }}</td>
+                                    <td>{{ opt.route_description }}</td>
+                                    <td>{{ "{:,.0f}".format(opt.estimated_cost_bdt|float) }}</td>
+                                    <td>{{ opt.estimated_time_days }}</td>
+                                    <td><span class="badge badge-medium">{{ opt.risk_level }}</span></td>
+                                    <td>-</td>
+                                </tr>
+                                {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-note">Revenue = Total Payment Received BDT {{ "{:,.0f}".format(results.financial.revenue) }}. Profit = Revenue − Original ({{ "{:,.0f}".format(results.financial.original_cost) }}) − Recovery − Damage − Delay. Highlighted row is closest to recommended route. All options passed 5 CSP constraints. Sorted by cost; profit-positive options shown green.</p>
+            </div>
+        </section>
+
+        <div class="result-actions">
+            <a href="/shipment" class="btn-secondary">Run Another Analysis</a>
+            <a href="/" class="btn-primary">Back to Home</a>
+        </div>
+    </main>
+
+    <script id="chartData" type="application/json">{{ chart_data|safe }}</script>
+    <script id="resultsData" type="application/json">{{ results_json|safe }}</script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>
