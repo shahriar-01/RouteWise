@@ -1,0 +1,1003 @@
+from,to,distance_km,travel_time_hrs,cost_bdt,route_type,blocked
+Chittagong,Bangkok,1332.2,3.74,187537.0,air,0
+Chittagong,Singapore,2697.5,5.39,367905.0,air,0
+Chittagong,Kuala Lumpur,2461.0,5.33,252707.0,air,0
+Chittagong,Yangon,1008.8,18.71,42887.0,road,0
+Singapore,Jakarta,948.3,3.28,137852.0,air,0
+Chittagong,Yangon,1114.6,55.01,14682.0,sea,0
+Kolkata,Singapore,2973.2,5.04,413798.0,air,0
+Chittagong,Yangon,1067.1,51.38,15813.0,sea,0
+Khulna,Kolkata,155.6,3.92,7938.0,road,0
+Kuala Lumpur,Singapore,323.1,1.8,45092.0,air,0
+Dhaka,Jakarta,3964.3,6.78,530362.0,air,0
+Chittagong,Singapore,2803.7,4.48,290936.0,air,0
+Khulna,Chittagong,296.2,16.01,5612.0,sea,0
+Dhaka,Singapore,2960.9,4.72,369646.0,air,0
+Chittagong,Yangon,959.4,46.5,20002.0,sea,0
+Chittagong,Singapore,2760.6,5.51,287571.0,air,0
+Port Blair,Kolkata,1360.2,3.78,184926.0,air,0
+Yangon,Bangkok,580.8,3.11,80995.0,air,0
+Dhaka,Jakarta,3906.0,7.55,547070.0,air,0
+Chittagong,Singapore,2754.5,5.38,272553.0,air,0
+Dhaka,Yangon,985.1,2.35,140757.0,air,0
+Chittagong,Kolkata,464.1,8.72,21841.0,road,0
+Khulna,Chittagong,343.5,15.53,6878.0,sea,0
+Port Blair,Kolkata,1693.5,76.08,32415.0,sea,0
+Chittagong,Kolkata,453.6,22.97,9811.0,sea,0
+Port Blair,Bangkok,1280.5,58.96,18244.0,sea,0
+Kuala Lumpur,Singapore,312.2,1.55,46990.0,air,0
+Kuala Lumpur,Jakarta,1553.6,89.13,25520.0,sea,0
+Chittagong,Yangon,892.6,16.06,29855.0,road,0
+Dhaka,Kuala Lumpur,2699.2,5.74,340349.0,air,0
+Yangon,Bangkok,596.7,2.62,77035.0,air,0
+Dhaka,Chittagong,271.2,5.95,12288.0,road,0
+Yangon,Chittagong,1090.5,64.01,20860.0,sea,0
+Kuala Lumpur,Dhaka,2627.6,4.89,284812.0,air,0
+Port Blair,Chittagong,1217.4,4.02,174549.0,air,0
+Bangkok,Jakarta,2437.8,5.58,346830.0,air,0
+Kolkata,Singapore,2965.5,5.76,432694.0,air,0
+Chittagong,Yangon,1145.4,64.41,19908.0,sea,0
+Dhaka,Chittagong,284.1,15.29,6371.0,sea,0
+Dhaka,Kuala Lumpur,2639.5,5.73,265416.0,air,0
+Port Blair,Singapore,2426.3,122.15,33626.0,sea,0
+Kolkata,Yangon,1384.3,22.47,60535.0,road,0
+Khulna,Chittagong,285.8,6.46,10514.0,road,0
+Chittagong,Kuala Lumpur,2399.7,5.0,246756.0,air,0
+Kuala Lumpur,Jakarta,1752.1,84.44,30277.0,sea,0
+Chittagong,Kuala Lumpur,2447.2,5.17,333144.0,air,0
+Yangon,Singapore,2705.9,143.78,49353.0,sea,0
+Khulna,Chittagong,281.1,6.24,9876.0,road,0
+Dhaka,Khulna,165.7,4.14,7457.0,road,0
+Chittagong,Singapore,2805.0,5.31,390834.0,air,0
+Dhaka,Yangon,980.5,3.63,128199.0,air,1
+Yangon,Singapore,1937.4,4.51,261998.0,air,0
+Yangon,Port Blair,1036.9,48.2,14743.0,sea,0
+Kolkata,Yangon,1276.4,23.92,51428.0,road,0
+Chittagong,Kuala Lumpur,2471.5,4.58,341156.0,air,1
+Chittagong,Kolkata,468.0,29.94,8887.0,sea,0
+Chittagong,Kuala Lumpur,2404.8,5.41,265648.0,air,0
+Khulna,Kolkata,159.3,3.97,7303.0,road,0
+Port Blair,Singapore,1735.3,3.44,197815.0,air,0
+Chittagong,Singapore,2758.6,4.73,279761.0,air,0
+Yangon,Bangkok,739.3,13.16,27366.0,road,0
+Port Blair,Chittagong,1202.6,2.64,160838.0,air,1
+Kolkata,Singapore,2926.2,5.61,374356.0,air,0
+Dhaka,Chittagong,285.1,16.56,7226.0,sea,0
+Dhaka,Jakarta,3920.4,6.43,395805.0,air,0
+Dhaka,Chittagong,287.0,6.67,13188.0,road,0
+Dhaka,Yangon,997.2,3.41,120484.0,air,0
+Kuala Lumpur,Jakarta,1521.5,69.98,20840.0,sea,0
+Port Blair,Chittagong,1253.0,2.87,179231.0,air,0
+Chittagong,Kolkata,413.7,7.89,18445.0,road,0
+Dhaka,Yangon,1001.7,3.14,133047.0,air,0
+Dhaka,Singapore,2978.7,5.11,428612.0,air,0
+Chittagong,Singapore,2760.6,5.51,287571.0,air,0
+Kolkata,Bangkok,1647.3,3.3,175917.0,air,0
+Port Blair,Yangon,993.5,54.39,21409.0,sea,0
+Chittagong,Kolkata,468.1,21.42,10256.0,sea,0
+Port Blair,Chittagong,1198.3,3.43,131539.0,air,0
+Dhaka,Chittagong,259.3,5.29,10774.0,road,0
+Port Blair,Kuala Lumpur,1805.0,84.31,32731.0,sea,0
+Khulna,Chittagong,335.7,17.51,5632.0,sea,0
+Chittagong,Yangon,959.4,46.5,20002.0,sea,0
+Kolkata,Kuala Lumpur,2630.3,6.36,393779.0,air,0
+Chittagong,Singapore,2725.0,5.26,287481.0,air,0
+Yangon,Singapore,1976.0,3.4,248318.0,air,0
+Kolkata,Kuala Lumpur,2614.7,5.48,377178.0,air,0
+Chittagong,Kolkata,408.0,7.78,17336.0,road,0
+Bangkok,Chittagong,1340.5,3.97,160105.0,air,0
+Dhaka,Chittagong,256.0,5.13,12310.0,road,0
+Dhaka,Khulna,163.3,3.29,7182.0,road,0
+Bangkok,Singapore,1494.3,3.32,201134.0,air,0
+Port Blair,Chittagong,1243.0,3.69,148197.0,air,0
+Yangon,Bangkok,826.6,42.37,15023.0,sea,0
+Chittagong,Yangon,949.0,19.39,37761.0,road,0
+Chittagong,Kolkata,442.6,8.44,17205.0,road,1
+Jakarta,Singapore,916.9,2.34,118672.0,air,0
+Dhaka,Chittagong,284.5,5.56,12315.0,road,0
+Dhaka,Jakarta,3829.2,6.27,556527.0,air,0
+Kolkata,Bangkok,1617.4,3.33,238833.0,air,0
+Port Blair,Singapore,1708.6,3.41,221481.0,air,0
+Yangon,Port Blair,1025.6,44.49,19212.0,sea,0
+Port Blair,Chittagong,1214.1,2.67,186202.0,air,0
+Dhaka,Jakarta,3828.9,6.6,547427.0,air,1
+Dhaka,Kuala Lumpur,2610.1,4.66,296038.0,air,0
+Chittagong,Yangon,1009.2,16.81,40808.0,road,0
+Kolkata,Yangon,1335.9,55.23,19335.0,sea,0
+Kuala Lumpur,Singapore,436.9,28.48,11173.0,sea,0
+Chittagong,Yangon,985.4,43.79,15129.0,sea,0
+Singapore,Jakarta,1285.1,52.12,26360.0,sea,1
+Chittagong,Kolkata,505.3,26.35,9668.0,sea,0
+Dhaka,Chittagong,276.8,6.0,11130.0,road,0
+Kolkata,Singapore,2993.1,6.05,376683.0,air,0
+Bangkok,Jakarta,3002.3,153.15,54462.0,sea,0
+Singapore,Jakarta,1132.4,62.56,17006.0,sea,0
+Chittagong,Kuala Lumpur,2414.1,5.08,346183.0,air,0
+Kolkata,Yangon,1310.2,26.98,58388.0,road,0
+Dhaka,Chittagong,284.5,5.56,12315.0,road,0
+Chittagong,Kuala Lumpur,2458.3,5.12,256181.0,air,0
+Bangkok,Jakarta,3317.5,155.43,41938.0,sea,0
+Chittagong,Dhaka,255.2,5.11,12594.0,road,0
+Dhaka,Kolkata,293.3,6.5,10640.0,road,0
+Yangon,Singapore,1980.6,5.01,288169.0,air,0
+Chittagong,Singapore,2687.2,5.45,305583.0,air,0
+Yangon,Singapore,2547.6,145.69,49097.0,sea,0
+Chittagong,Kolkata,508.1,22.81,9274.0,sea,0
+Bangkok,Kuala Lumpur,1743.7,98.16,31581.0,sea,0
+Port Blair,Chittagong,1205.5,4.06,133485.0,air,0
+Chittagong,Kuala Lumpur,2437.1,4.59,292158.0,air,0
+Khulna,Chittagong,277.7,5.47,13687.0,road,0
+Chittagong,Dhaka,221.0,2.67,37176.0,air,0
+Dhaka,Bangkok,1606.2,4.32,242364.0,air,0
+Port Blair,Chittagong,1200.3,3.73,177480.0,air,0
+Dhaka,Kolkata,335.1,7.23,14626.0,road,0
+Dhaka,Yangon,993.0,2.86,126403.0,air,0
+Chittagong,Bangkok,1365.6,3.03,205440.0,air,0
+Dhaka,Jakarta,3829.0,7.89,425849.0,air,0
+Kuala Lumpur,Jakarta,1221.3,3.28,126746.0,air,0
+Chittagong,Singapore,2764.8,4.85,403194.0,air,0
+Dhaka,Kuala Lumpur,2699.0,5.32,382628.0,air,1
+Dhaka,Jakarta,3970.7,7.62,571607.0,air,0
+Port Blair,Chittagong,1772.5,68.82,25595.0,sea,0
+Yangon,Singapore,1926.3,4.64,205171.0,air,0
+Kolkata,Singapore,2952.7,6.01,433276.0,air,0
+Chittagong,Kolkata,365.8,2.84,54204.0,air,0
+Chittagong,Dhaka,259.3,5.18,10978.0,road,0
+Dhaka,Bangkok,1609.1,3.21,194483.0,air,0
+Chittagong,Yangon,908.6,15.93,34922.0,road,0
+Dhaka,Chittagong,279.7,5.63,12011.0,road,0
+Port Blair,Kuala Lumpur,1377.5,3.25,177487.0,air,0
+Chittagong,Bangkok,1334.7,2.76,158072.0,air,0
+Port Blair,Yangon,694.0,3.09,93474.0,air,0
+Yangon,Singapore,2007.8,4.05,247748.0,air,0
+Port Blair,Singapore,2261.6,102.19,39187.0,sea,0
+Chittagong,Kolkata,471.9,23.73,7540.0,sea,0
+Dhaka,Bangkok,1609.5,3.93,184360.0,air,0
+Chittagong,Singapore,2793.5,5.76,387111.0,air,0
+Chittagong,Kolkata,442.6,9.35,18128.0,road,1
+Khulna,Chittagong,314.4,6.94,12748.0,road,0
+Chittagong,Yangon,961.0,18.69,37586.0,road,0
+Khulna,Dhaka,162.3,4.46,6992.0,road,0
+Chittagong,Bangkok,1365.6,3.03,205440.0,air,0
+Kolkata,Kuala Lumpur,2656.4,4.96,292691.0,air,0
+Port Blair,Chittagong,1634.9,90.41,24312.0,sea,0
+Chittagong,Kolkata,453.7,25.71,10364.0,sea,0
+Kolkata,Yangon,1491.7,65.39,24467.0,sea,0
+Chittagong,Kolkata,525.9,27.4,8949.0,sea,0
+Dhaka,Chittagong,224.4,1.38,42932.0,air,0
+Kolkata,Port Blair,1654.4,75.52,33373.0,sea,0
+Port Blair,Chittagong,1211.6,3.92,171750.0,air,0
+Chittagong,Yangon,771.8,2.36,93858.0,air,0
+Kolkata,Bangkok,1665.2,4.18,231703.0,air,0
+Chittagong,Bangkok,1338.8,3.75,189018.0,air,0
+Dhaka,Chittagong,271.2,5.95,12288.0,road,0
+Chittagong,Kuala Lumpur,2454.9,4.87,268222.0,air,0
+Yangon,Kuala Lumpur,2229.4,87.71,28894.0,sea,0
+Chittagong,Singapore,2760.8,5.19,347468.0,air,1
+Bangkok,Singapore,1486.5,3.58,219192.0,air,0
+Dhaka,Chittagong,272.8,14.51,7261.0,sea,0
+Dhaka,Kuala Lumpur,2644.4,5.25,390646.0,air,0
+Chittagong,Yangon,1043.4,55.75,16847.0,sea,0
+Chittagong,Singapore,2758.6,4.73,279761.0,air,0
+Singapore,Port Blair,2383.7,116.95,38134.0,sea,0
+Yangon,Singapore,1951.8,3.78,228798.0,air,0
+Chittagong,Bangkok,1376.7,4.3,143557.0,air,0
+Yangon,Bangkok,595.4,2.36,73819.0,air,0
+Kolkata,Singapore,3006.4,4.67,324683.0,air,0
+Singapore,Kolkata,3031.7,6.04,404034.0,air,0
+Chittagong,Kuala Lumpur,2431.6,4.26,283326.0,air,0
+Singapore,Jakarta,933.3,2.44,108195.0,air,0
+Port Blair,Chittagong,1684.0,68.37,30286.0,sea,0
+Dhaka,Singapore,2979.0,6.35,351155.0,air,0
+Port Blair,Kuala Lumpur,1432.2,4.09,191225.0,air,0
+Chittagong,Kolkata,367.7,2.98,47943.0,air,0
+Dhaka,Bangkok,1602.9,4.44,229087.0,air,0
+Bangkok,Kuala Lumpur,1549.4,79.95,32739.0,sea,1
+Kolkata,Khulna,154.0,4.06,7377.0,road,0
+Kolkata,Port Blair,1648.6,93.54,27602.0,sea,0
+Khulna,Chittagong,333.4,20.02,6837.0,sea,0
+Dhaka,Khulna,162.3,4.49,6765.0,road,0
+Dhaka,Kuala Lumpur,2718.1,4.97,299011.0,air,0
+Chittagong,Singapore,2707.5,5.13,365341.0,air,0
+Port Blair,Chittagong,1207.0,3.84,179617.0,air,0
+Singapore,Kuala Lumpur,363.0,7.03,17529.0,road,0
+Kolkata,Port Blair,1769.5,91.89,29124.0,sea,0
+Chittagong,Yangon,949.0,19.39,37761.0,road,0
+Dhaka,Khulna,173.0,4.15,7808.0,road,0
+Port Blair,Bangkok,911.1,2.54,121160.0,air,0
+Port Blair,Bangkok,1125.4,52.94,25334.0,sea,0
+Port Blair,Kuala Lumpur,1809.7,77.54,32648.0,sea,0
+Chittagong,Singapore,2760.8,5.19,347468.0,air,1
+Kolkata,Port Blair,1904.6,87.04,27275.0,sea,0
+Port Blair,Chittagong,1531.1,71.49,22139.0,sea,1
+Yangon,Kuala Lumpur,1667.5,3.66,207977.0,air,0
+Chittagong,Kuala Lumpur,2436.2,4.37,355845.0,air,0
+Kolkata,Yangon,1080.0,4.07,143084.0,air,0
+Bangkok,Kuala Lumpur,1602.7,29.71,66135.0,road,0
+Chittagong,Yangon,1041.2,47.86,18535.0,sea,0
+Kolkata,Kuala Lumpur,2613.3,4.55,277731.0,air,1
+Chittagong,Singapore,2760.1,6.1,307990.0,air,0
+Bangkok,Singapore,1441.3,4.62,218831.0,air,0
+Port Blair,Yangon,704.4,3.36,99124.0,air,0
+Khulna,Chittagong,314.4,6.94,12748.0,road,0
+Dhaka,Singapore,2891.7,6.6,386172.0,air,0
+Dhaka,Chittagong,216.1,2.19,37458.0,air,0
+Chittagong,Kuala Lumpur,2443.1,5.55,317360.0,air,0
+Port Blair,Singapore,2383.7,116.98,38666.0,sea,0
+Chittagong,Yangon,985.4,55.45,18933.0,sea,0
+Dhaka,Kuala Lumpur,2612.1,5.37,364445.0,air,0
+Chittagong,Singapore,2768.2,5.59,359861.0,air,0
+Bangkok,Kuala Lumpur,1616.8,69.53,24835.0,sea,0
+Port Blair,Chittagong,1209.0,2.83,145720.0,air,0
+Dhaka,Bangkok,1596.8,4.44,232830.0,air,0
+Bangkok,Kuala Lumpur,1240.8,3.62,136820.0,air,0
+Port Blair,Chittagong,1627.5,64.97,24923.0,sea,0
+Khulna,Chittagong,339.5,20.41,6813.0,sea,0
+Dhaka,Singapore,3000.1,6.11,348743.0,air,0
+Kuala Lumpur,Jakarta,1194.6,2.97,158664.0,air,0
+Kuala Lumpur,Chittagong,2430.4,6.11,283299.0,air,0
+Chittagong,Kolkata,459.3,8.35,18170.0,road,0
+Dhaka,Kolkata,252.7,2.61,39365.0,air,0
+Bangkok,Kuala Lumpur,1492.1,27.21,51739.0,road,0
+Yangon,Port Blair,976.3,58.74,16553.0,sea,0
+Singapore,Dhaka,2899.9,6.55,337508.0,air,0
+Singapore,Jakarta,1225.0,55.35,24871.0,sea,0
+Chittagong,Yangon,1051.1,44.81,18283.0,sea,0
+Yangon,Chittagong,988.8,20.69,45015.0,road,0
+Kolkata,Singapore,3024.9,5.78,388824.0,air,0
+Singapore,Jakarta,938.2,3.68,121918.0,air,0
+Singapore,Kuala Lumpur,392.7,23.45,8571.0,sea,0
+Chittagong,Bangkok,1391.9,3.69,154589.0,air,1
+Bangkok,Jakarta,2342.0,4.84,243519.0,air,0
+Dhaka,Kolkata,302.4,5.41,11497.0,road,0
+Chittagong,Kolkata,353.7,2.0,55672.0,air,0
+Yangon,Bangkok,605.1,2.14,83461.0,air,0
+Khulna,Chittagong,291.2,5.76,13494.0,road,0
+Khulna,Kolkata,165.3,3.97,7684.0,road,1
+Dhaka,Chittagong,272.1,5.95,11380.0,road,0
+Chittagong,Bangkok,1376.6,3.82,185897.0,air,0
+Chittagong,Bangkok,1358.6,3.19,204723.0,air,0
+Khulna,Chittagong,340.9,18.89,5783.0,sea,0
+Khulna,Chittagong,291.9,5.81,11365.0,road,0
+Chittagong,Singapore,2805.0,5.31,390834.0,air,0
+Chittagong,Yangon,767.9,3.18,94392.0,air,0
+Kuala Lumpur,Yangon,2245.8,87.94,40481.0,sea,0
+Dhaka,Chittagong,316.8,17.22,6379.0,sea,0
+Dhaka,Chittagong,216.3,2.75,37458.0,air,0
+Singapore,Jakarta,1313.4,55.84,26256.0,sea,0
+Singapore,Jakarta,1214.8,63.52,17834.0,sea,0
+Port Blair,Chittagong,1503.6,62.14,31470.0,sea,0
+Kolkata,Kuala Lumpur,2683.5,4.32,322514.0,air,0
+Kolkata,Singapore,2940.7,4.77,382214.0,air,0
+Dhaka,Bangkok,1612.1,4.04,228991.0,air,0
+Port Blair,Kuala Lumpur,1400.5,3.91,170601.0,air,0
+Port Blair,Singapore,2147.9,82.32,33924.0,sea,0
+Chittagong,Yangon,1106.2,51.4,15527.0,sea,0
+Yangon,Bangkok,597.7,3.33,89315.0,air,0
+Dhaka,Kolkata,301.4,5.59,11982.0,road,0
+Chittagong,Kolkata,462.1,27.89,9699.0,sea,1
+Kolkata,Port Blair,1669.3,75.59,33183.0,sea,0
+Khulna,Chittagong,323.9,19.28,7365.0,sea,0
+Port Blair,Bangkok,1214.1,61.22,24683.0,sea,0
+Bangkok,Singapore,1449.5,4.01,174419.0,air,0
+Port Blair,Yangon,875.1,46.88,17614.0,sea,0
+Bangkok,Jakarta,2384.5,4.85,340161.0,air,0
+Singapore,Yangon,1943.4,3.72,215194.0,air,0
+Dhaka,Kolkata,352.6,23.95,7742.0,sea,0
+Bangkok,Jakarta,3083.0,126.7,53990.0,sea,0
+Chittagong,Yangon,952.0,19.42,37979.0,road,0
+Chittagong,Singapore,2702.6,4.44,377509.0,air,0
+Chittagong,Yangon,774.5,3.27,112742.0,air,0
+Chittagong,Kolkata,463.1,22.77,7435.0,sea,0
+Dhaka,Khulna,187.1,5.02,7846.0,road,0
+Bangkok,Singapore,1441.0,4.12,156661.0,air,0
+Kuala Lumpur,Port Blair,1376.9,4.06,140832.0,air,0
+Port Blair,Singapore,2238.6,92.02,31349.0,sea,0
+Bangkok,Kolkata,1676.2,3.67,224862.0,air,0
+Khulna,Chittagong,283.3,6.72,11563.0,road,0
+Dhaka,Chittagong,221.0,2.69,37323.0,air,0
+Chittagong,Yangon,989.2,50.32,13922.0,sea,1
+Dhaka,Chittagong,263.6,5.63,12329.0,road,0
+Chittagong,Kolkata,455.4,9.8,17866.0,road,0
+Bangkok,Singapore,1435.0,3.88,186034.0,air,0
+Dhaka,Khulna,182.6,4.33,10128.0,road,0
+Chittagong,Bangkok,1332.2,3.74,187537.0,air,0
+Khulna,Chittagong,318.9,6.89,14921.0,road,0
+Dhaka,Chittagong,220.6,2.2,42892.0,air,0
+Dhaka,Khulna,185.2,4.57,7633.0,road,0
+Chittagong,Bangkok,1350.5,2.87,165394.0,air,0
+Chittagong,Kolkata,453.6,22.97,9811.0,sea,0
+Dhaka,Yangon,1025.1,3.16,140003.0,air,0
+Dhaka,Chittagong,319.1,15.19,6994.0,sea,0
+Kolkata,Singapore,2967.3,5.11,422497.0,air,0
+Yangon,Port Blair,869.7,39.41,15650.0,sea,0
+Chittagong,Kolkata,442.7,8.23,17410.0,road,0
+Dhaka,Bangkok,1590.1,4.36,228946.0,air,0
+Khulna,Chittagong,350.1,17.11,7258.0,sea,0
+Dhaka,Chittagong,250.8,5.5,10238.0,road,0
+Bangkok,Singapore,1440.4,3.78,203956.0,air,0
+Dhaka,Singapore,2912.9,6.15,312801.0,air,0
+Kuala Lumpur,Singapore,381.3,8.23,15663.0,road,0
+Port Blair,Yangon,980.0,42.11,14797.0,sea,0
+Yangon,Port Blair,988.8,54.75,16992.0,sea,0
+Kolkata,Singapore,3031.7,6.3,391581.0,air,0
+Port Blair,Chittagong,1200.3,3.73,177480.0,air,0
+Chittagong,Yangon,771.8,2.36,93858.0,air,0
+Khulna,Chittagong,301.7,7.38,13079.0,road,0
+Port Blair,Kolkata,1800.2,89.14,26590.0,sea,0
+Chittagong,Yangon,1051.7,42.81,21694.0,sea,0
+Yangon,Kuala Lumpur,1689.2,3.99,203698.0,air,0
+Port Blair,Chittagong,1206.2,3.26,172547.0,air,0
+Yangon,Singapore,1983.4,4.39,256233.0,air,0
+Yangon,Bangkok,582.3,2.52,77224.0,air,0
+Chittagong,Yangon,1012.6,19.92,39090.0,road,0
+Dhaka,Singapore,3007.1,5.63,331280.0,air,0
+Port Blair,Chittagong,1205.5,4.06,133485.0,air,0
+Bangkok,Kuala Lumpur,1619.7,77.98,30973.0,sea,0
+Khulna,Chittagong,306.2,17.27,6565.0,sea,0
+Khulna,Kolkata,160.9,4.11,7996.0,road,0
+Port Blair,Kuala Lumpur,1865.6,98.93,34921.0,sea,0
+Dhaka,Kuala Lumpur,2715.8,4.85,379903.0,air,0
+Khulna,Chittagong,301.7,13.56,7211.0,sea,0
+Kolkata,Chittagong,420.7,8.94,16377.0,road,0
+Dhaka,Chittagong,268.9,13.8,6382.0,sea,0
+Chittagong,Kolkata,442.6,8.44,17205.0,road,1
+Port Blair,Singapore,1698.1,3.69,230489.0,air,0
+Chittagong,Kolkata,422.7,8.66,15127.0,road,0
+Chittagong,Bangkok,1374.2,4.0,171429.0,air,0
+Khulna,Chittagong,296.2,16.01,5612.0,sea,0
+Yangon,Kuala Lumpur,1642.2,3.99,235847.0,air,0
+Chittagong,Khulna,280.1,4.83,12410.0,road,0
+Kuala Lumpur,Bangkok,1597.7,29.71,75184.0,road,0
+Dhaka,Kuala Lumpur,2718.9,5.1,371724.0,air,0
+Kuala Lumpur,Jakarta,1222.9,3.66,164108.0,air,0
+Dhaka,Chittagong,220.4,1.93,30794.0,air,0
+Khulna,Chittagong,314.2,5.65,12128.0,road,0
+Yangon,Kuala Lumpur,2291.9,101.5,46176.0,sea,0
+Chittagong,Bangkok,1338.8,3.75,189018.0,air,0
+Chittagong,Kuala Lumpur,2475.3,5.52,358739.0,air,0
+Kuala Lumpur,Singapore,392.7,23.33,8291.0,sea,0
+Dhaka,Kolkata,251.1,2.58,46960.0,air,0
+Chittagong,Singapore,2722.8,5.05,310800.0,air,0
+Kolkata,Yangon,1202.1,24.78,43129.0,road,0
+Bangkok,Jakarta,2413.3,4.64,338377.0,air,0
+Dhaka,Chittagong,319.1,15.01,6127.0,sea,0
+Chittagong,Singapore,2768.2,5.59,359861.0,air,0
+Port Blair,Singapore,2139.8,82.24,39386.0,sea,1
+Chittagong,Kuala Lumpur,2506.8,4.39,325050.0,air,0
+Port Blair,Chittagong,1247.1,3.97,170274.0,air,0
+Dhaka,Bangkok,1596.8,4.74,223751.0,air,0
+Khulna,Kolkata,145.9,3.02,6944.0,road,0
+Chittagong,Kolkata,459.3,8.35,18170.0,road,0
+Chittagong,Yangon,1033.8,42.76,18446.0,sea,0
+Kuala Lumpur,Kolkata,2683.5,4.49,331778.0,air,0
+Kuala Lumpur,Singapore,322.7,1.68,53270.0,air,0
+Khulna,Chittagong,336.6,15.99,8849.0,sea,0
+Chittagong,Kuala Lumpur,2465.7,5.43,337759.0,air,0
+Port Blair,Chittagong,1795.7,92.4,31433.0,sea,0
+Port Blair,Chittagong,1253.0,2.87,179231.0,air,0
+Chittagong,Kuala Lumpur,2465.9,4.92,287558.0,air,0
+Chittagong,Khulna,335.7,16.85,5647.0,sea,0
+Khulna,Kolkata,158.9,3.98,7170.0,road,0
+Chittagong,Khulna,291.9,5.77,11645.0,road,0
+Chittagong,Singapore,2791.9,4.78,319047.0,air,0
+Yangon,Port Blair,905.6,38.15,14409.0,sea,0
+Chittagong,Singapore,2803.7,4.48,290936.0,air,0
+Chittagong,Yangon,1046.6,59.04,21270.0,sea,0
+Kolkata,Singapore,2894.9,5.79,322239.0,air,0
+Chittagong,Dhaka,255.2,5.11,12594.0,road,0
+Chittagong,Kuala Lumpur,2428.5,5.43,331344.0,air,0
+Dhaka,Chittagong,255.2,5.27,12336.0,road,1
+Dhaka,Kuala Lumpur,2640.4,5.1,352667.0,air,1
+Khulna,Chittagong,333.4,20.02,6837.0,sea,0
+Bangkok,Chittagong,1340.5,3.97,160105.0,air,0
+Khulna,Kolkata,159.2,3.73,6569.0,road,0
+Chittagong,Singapore,2719.0,6.01,362177.0,air,0
+Port Blair,Bangkok,895.6,2.35,111217.0,air,0
+Dhaka,Chittagong,220.6,2.2,42892.0,air,0
+Port Blair,Bangkok,897.8,3.23,129300.0,air,0
+Dhaka,Kuala Lumpur,2669.2,5.92,385582.0,air,0
+Chittagong,Singapore,2702.6,4.44,377509.0,air,0
+Chittagong,Kuala Lumpur,2406.1,4.13,248932.0,air,0
+Dhaka,Chittagong,268.9,13.8,6382.0,sea,0
+Khulna,Chittagong,274.1,5.05,10830.0,road,0
+Dhaka,Yangon,1019.1,3.55,144737.0,air,0
+Singapore,Chittagong,2791.9,4.66,317981.0,air,0
+Dhaka,Chittagong,252.1,5.12,9957.0,road,0
+Port Blair,Singapore,2493.8,116.76,51501.0,sea,0
+Dhaka,Singapore,3003.2,5.61,340390.0,air,0
+Yangon,Kuala Lumpur,1717.9,3.26,181195.0,air,0
+Chittagong,Yangon,1051.1,44.81,18283.0,sea,0
+Chittagong,Yangon,1067.1,51.38,15813.0,sea,0
+Kuala Lumpur,Jakarta,1204.3,3.14,137679.0,air,0
+Chittagong,Kolkata,363.4,1.9,65373.0,air,0
+Chittagong,Yangon,985.0,43.65,14875.0,sea,0
+Port Blair,Chittagong,1211.6,3.92,171750.0,air,0
+Chittagong,Kuala Lumpur,2465.7,5.43,337759.0,air,0
+Port Blair,Kuala Lumpur,1428.1,4.07,168586.0,air,0
+Kolkata,Kuala Lumpur,2687.3,5.21,370808.0,air,0
+Bangkok,Jakarta,2348.4,4.84,280694.0,air,0
+Yangon,Singapore,1924.3,3.42,208775.0,air,0
+Kolkata,Port Blair,1738.6,87.23,22969.0,sea,0
+Dhaka,Khulna,179.1,4.29,8270.0,road,0
+Port Blair,Bangkok,903.0,3.72,132006.0,air,0
+Dhaka,Chittagong,278.7,5.65,11091.0,road,0
+Singapore,Jakarta,1213.5,59.3,23370.0,sea,0
+Chittagong,Bangkok,1334.7,2.76,158072.0,air,0
+Dhaka,Chittagong,256.0,5.13,12310.0,road,0
+Yangon,Bangkok,764.0,40.88,14495.0,sea,0
+Dhaka,Kolkata,288.8,6.34,12387.0,road,0
+Kolkata,Port Blair,1800.2,86.5,25705.0,sea,0
+Bangkok,Jakarta,2970.3,160.95,39608.0,sea,0
+Chittagong,Kolkata,448.9,8.67,17393.0,road,0
+Khulna,Chittagong,317.7,20.0,7482.0,sea,0
+Dhaka,Yangon,1007.7,3.68,141471.0,air,0
+Port Blair,Chittagong,1214.1,2.67,186202.0,air,0
+Yangon,Port Blair,942.9,43.41,19194.0,sea,0
+Dhaka,Khulna,174.7,4.52,8111.0,road,0
+Kuala Lumpur,Singapore,420.5,18.58,8851.0,sea,0
+Jakarta,Bangkok,2443.7,4.19,363359.0,air,0
+Bangkok,Jakarta,3178.3,146.98,41868.0,sea,0
+Port Blair,Chittagong,1792.0,83.95,30307.0,sea,0
+Port Blair,Bangkok,1299.8,76.25,26899.0,sea,0
+Kolkata,Yangon,1064.8,2.59,125006.0,air,0
+Yangon,Bangkok,741.9,16.07,25819.0,road,0
+Chittagong,Kuala Lumpur,2475.3,5.52,358739.0,air,0
+Dhaka,Kuala Lumpur,2687.3,5.1,400382.0,air,0
+Dhaka,Singapore,2915.5,5.07,357843.0,air,0
+Chittagong,Singapore,2772.6,6.06,378266.0,air,0
+Bangkok,Yangon,763.4,14.91,30627.0,road,0
+Chittagong,Kuala Lumpur,2428.5,5.43,331344.0,air,0
+Chittagong,Yangon,1012.6,19.92,39090.0,road,0
+Kolkata,Chittagong,448.9,9.06,16775.0,road,0
+Singapore,Jakarta,1300.1,52.56,25824.0,sea,0
+Dhaka,Jakarta,3877.1,8.03,514446.0,air,0
+Khulna,Chittagong,339.5,20.41,6813.0,sea,0
+Dhaka,Kolkata,311.3,7.27,13296.0,road,0
+Khulna,Kolkata,148.6,3.51,6069.0,road,0
+Dhaka,Bangkok,1547.3,3.82,207574.0,air,0
+Kuala Lumpur,Bangkok,1221.1,3.49,148080.0,air,0
+Yangon,Bangkok,598.7,3.22,68296.0,air,0
+Khulna,Chittagong,346.9,20.15,6699.0,sea,0
+Dhaka,Yangon,1005.5,2.77,136650.0,air,0
+Chittagong,Kuala Lumpur,2435.0,5.63,335886.0,air,0
+Chittagong,Yangon,977.7,45.03,17815.0,sea,0
+Kuala Lumpur,Singapore,449.8,19.92,9992.0,sea,0
+Khulna,Kolkata,154.0,4.08,7236.0,road,0
+Kolkata,Port Blair,1897.3,86.27,26226.0,sea,0
+Dhaka,Chittagong,224.5,2.34,42166.0,air,0
+Chittagong,Singapore,2707.5,5.13,365341.0,air,0
+Yangon,Dhaka,1015.0,3.49,122995.0,air,0
+Port Blair,Chittagong,1529.5,73.62,30433.0,sea,0
+Dhaka,Kolkata,336.2,18.87,7583.0,sea,0
+Bangkok,Dhaka,1596.8,4.39,244360.0,air,0
+Port Blair,Chittagong,1241.3,3.89,162612.0,air,0
+Yangon,Bangkok,739.6,15.5,32752.0,road,0
+Dhaka,Jakarta,3828.4,6.96,433937.0,air,0
+Chittagong,Singapore,2714.0,4.52,292299.0,air,1
+Port Blair,Kolkata,1813.0,87.35,38338.0,sea,0
+Port Blair,Chittagong,1213.0,3.14,148137.0,air,0
+Khulna,Chittagong,301.7,13.56,7211.0,sea,0
+Chittagong,Singapore,2687.3,5.37,299544.0,air,0
+Chittagong,Kolkata,356.7,2.64,50455.0,air,0
+Bangkok,Jakarta,3264.8,162.36,59302.0,sea,0
+Kolkata,Dhaka,311.1,6.93,13082.0,road,0
+Dhaka,Yangon,999.0,2.49,131382.0,air,0
+Port Blair,Kuala Lumpur,1873.3,74.36,38484.0,sea,0
+Chittagong,Kuala Lumpur,2471.5,4.58,341156.0,air,1
+Chittagong,Yangon,977.7,45.03,17815.0,sea,0
+Kolkata,Yangon,1293.4,25.16,50831.0,road,0
+Dhaka,Kuala Lumpur,2636.7,4.9,302344.0,air,1
+Port Blair,Bangkok,896.5,2.8,105529.0,air,0
+Kolkata,Yangon,1268.6,20.81,51213.0,road,0
+Dhaka,Singapore,2994.6,5.03,436040.0,air,0
+Kolkata,Yangon,1387.6,23.46,58893.0,road,0
+Khulna,Kolkata,152.0,3.41,8228.0,road,0
+Kolkata,Singapore,2903.1,5.83,333074.0,air,0
+Port Blair,Chittagong,1769.7,69.23,37030.0,sea,0
+Dhaka,Bangkok,1598.8,3.36,224610.0,air,0
+Chittagong,Kolkata,430.1,9.15,19496.0,road,0
+Dhaka,Chittagong,216.3,2.75,37458.0,air,0
+Port Blair,Kuala Lumpur,1382.7,3.43,145301.0,air,0
+Dhaka,Kuala Lumpur,2617.0,5.95,288947.0,air,0
+Port Blair,Chittagong,1567.5,89.67,31519.0,sea,0
+Singapore,Jakarta,1283.8,50.17,24817.0,sea,0
+Dhaka,Kuala Lumpur,2606.9,5.57,368067.0,air,0
+Chittagong,Yangon,1055.4,56.68,20335.0,sea,0
+Port Blair,Bangkok,896.0,2.38,130995.0,air,0
+Khulna,Chittagong,323.9,19.28,7365.0,sea,0
+Kuala Lumpur,Singapore,310.4,2.41,47763.0,air,0
+Dhaka,Singapore,2992.3,6.03,430280.0,air,1
+Port Blair,Chittagong,1255.9,3.98,141548.0,air,0
+Yangon,Port Blair,995.7,50.45,20785.0,sea,0
+Port Blair,Kuala Lumpur,1855.5,74.75,36903.0,sea,0
+Chittagong,Kolkata,462.4,26.9,8969.0,sea,0
+Port Blair,Yangon,894.3,46.36,16601.0,sea,0
+Port Blair,Yangon,974.4,48.57,14075.0,sea,0
+Chittagong,Port Blair,1769.7,70.6,36042.0,sea,0
+Bangkok,Jakarta,2441.6,5.15,281592.0,air,0
+Kolkata,Dhaka,352.6,24.75,7385.0,sea,0
+Kolkata,Kuala Lumpur,2602.8,5.24,297896.0,air,0
+Port Blair,Yangon,1025.6,44.08,19116.0,sea,0
+Dhaka,Chittagong,285.1,16.56,7226.0,sea,0
+Port Blair,Chittagong,1567.5,89.67,31519.0,sea,0
+Khulna,Chittagong,305.7,19.0,6392.0,sea,0
+Dhaka,Kuala Lumpur,2627.6,5.12,285588.0,air,0
+Port Blair,Chittagong,1219.8,3.08,176015.0,air,0
+Kolkata,Singapore,3011.2,5.87,342855.0,air,0
+Dhaka,Yangon,1025.6,2.35,115310.0,air,0
+Kuala Lumpur,Singapore,429.6,19.17,7828.0,sea,0
+Port Blair,Singapore,1721.0,4.47,195009.0,air,0
+Chittagong,Yangon,799.8,2.68,109541.0,air,0
+Kolkata,Bangkok,1690.0,4.4,188287.0,air,1
+Kuala Lumpur,Singapore,403.9,17.63,8246.0,sea,0
+Singapore,Chittagong,2791.9,4.66,317981.0,air,0
+Dhaka,Yangon,1015.0,3.49,119588.0,air,0
+Yangon,Bangkok,602.0,2.61,75273.0,air,0
+Yangon,Singapore,1996.0,5.37,289049.0,air,0
+Yangon,Chittagong,1085.4,45.14,23219.0,sea,0
+Dhaka,Kuala Lumpur,2710.9,5.39,403968.0,air,0
+Port Blair,Chittagong,1207.0,3.84,179617.0,air,0
+Bangkok,Singapore,1456.2,2.97,211309.0,air,0
+Yangon,Singapore,2587.2,112.73,34762.0,sea,1
+Port Blair,Singapore,2122.1,118.93,38908.0,sea,0
+Bangkok,Singapore,1494.5,3.51,163230.0,air,0
+Bangkok,Jakarta,3164.2,170.05,53946.0,sea,0
+Chittagong,Kolkata,500.2,24.39,8557.0,sea,0
+Chittagong,Yangon,794.9,3.39,117120.0,air,0
+Kolkata,Bangkok,1663.1,4.54,212055.0,air,0
+Bangkok,Singapore,1489.2,4.24,179759.0,air,0
+Yangon,Singapore,2487.6,116.98,46356.0,sea,0
+Yangon,Port Blair,994.2,44.68,18864.0,sea,0
+Dhaka,Kolkata,259.9,2.14,40935.0,air,0
+Chittagong,Kolkata,412.4,7.69,18666.0,road,0
+Bangkok,Singapore,1479.9,3.86,197096.0,air,0
+Chittagong,Kolkata,524.6,31.47,11501.0,sea,0
+Port Blair,Kolkata,1353.1,3.59,200747.0,air,0
+Dhaka,Kolkata,311.1,6.74,13302.0,road,0
+Port Blair,Yangon,931.3,54.91,15360.0,sea,0
+Kolkata,Port Blair,1718.1,79.77,33125.0,sea,0
+Chittagong,Yangon,1030.2,17.77,37793.0,road,0
+Chittagong,Kuala Lumpur,2430.4,5.98,273789.0,air,0
+Yangon,Kuala Lumpur,2253.4,120.33,36945.0,sea,0
+Yangon,Kolkata,1384.3,21.48,62255.0,road,0
+Kolkata,Chittagong,504.3,26.23,7119.0,sea,0
+Port Blair,Singapore,2138.1,90.16,41164.0,sea,0
+Dhaka,Chittagong,287.0,6.67,13188.0,road,0
+Kolkata,Kuala Lumpur,2625.3,5.49,265556.0,air,0
+Bangkok,Kuala Lumpur,1459.4,25.83,51781.0,road,0
+Khulna,Chittagong,324.1,21.34,6693.0,sea,0
+Kolkata,Port Blair,1942.9,84.25,36545.0,sea,0
+Chittagong,Yangon,1011.8,19.06,39568.0,road,0
+Dhaka,Singapore,3021.1,5.51,448963.0,air,0
+Chittagong,Kuala Lumpur,2436.2,4.37,355845.0,air,0
+Khulna,Chittagong,295.1,5.22,13557.0,road,0
+Chittagong,Kolkata,442.6,9.35,18128.0,road,1
+Chittagong,Dhaka,221.8,1.82,40300.0,air,0
+Port Blair,Chittagong,1220.5,3.26,149754.0,air,0
+Chittagong,Kolkata,522.3,24.68,11436.0,sea,0
+Bangkok,Port Blair,1125.4,53.87,25178.0,sea,0
+Bangkok,Kuala Lumpur,1686.9,87.21,29469.0,sea,0
+Khulna,Chittagong,298.0,13.15,8098.0,sea,0
+Khulna,Kolkata,160.0,3.81,7357.0,road,0
+Kolkata,Kuala Lumpur,2657.6,5.12,359989.0,air,0
+Khulna,Chittagong,299.3,15.43,5728.0,sea,0
+Kolkata,Singapore,2900.0,6.11,365365.0,air,0
+Chittagong,Yangon,799.8,2.68,109541.0,air,0
+Chittagong,Kuala Lumpur,2457.0,5.18,316954.0,air,0
+Bangkok,Kuala Lumpur,1750.3,75.32,26970.0,sea,1
+Kolkata,Bangkok,1660.0,4.51,167959.0,air,0
+Yangon,Kuala Lumpur,1714.3,3.57,201578.0,air,0
+Singapore,Jakarta,915.8,3.32,112144.0,air,0
+Port Blair,Yangon,708.4,2.52,91509.0,air,0
+Kolkata,Singapore,3028.7,6.43,305578.0,air,0
+Chittagong,Singapore,2760.1,6.1,307990.0,air,0
+Bangkok,Singapore,1482.7,3.18,184325.0,air,0
+Kolkata,Port Blair,1827.8,89.87,36391.0,sea,0
+Chittagong,Singapore,2736.9,5.09,277971.0,air,0
+Chittagong,Port Blair,1529.5,71.35,31279.0,sea,0
+Chittagong,Yangon,1085.4,44.44,22914.0,sea,0
+Dhaka,Kuala Lumpur,2664.3,4.55,372954.0,air,0
+Khulna,Chittagong,280.1,5.01,12688.0,road,0
+Yangon,Singapore,2507.0,99.93,38920.0,sea,0
+Port Blair,Yangon,1014.1,45.8,15291.0,sea,0
+Chittagong,Kolkata,448.9,8.67,17393.0,road,0
+Chittagong,Kuala Lumpur,2458.3,5.12,256181.0,air,0
+Bangkok,Kuala Lumpur,1522.3,26.21,52167.0,road,0
+Dhaka,Kuala Lumpur,2662.4,4.77,310893.0,air,0
+Khulna,Kolkata,151.8,3.4,6252.0,road,0
+Dhaka,Chittagong,318.2,18.57,7182.0,sea,1
+Port Blair,Yangon,693.6,3.53,111208.0,air,0
+Chittagong,Kolkata,500.2,24.39,8557.0,sea,0
+Chittagong,Yangon,1013.3,46.46,21412.0,sea,0
+Dhaka,Singapore,2977.1,5.09,320988.0,air,0
+Kolkata,Singapore,2996.4,5.84,319699.0,air,0
+Chittagong,Kuala Lumpur,2506.8,4.39,325050.0,air,0
+Chittagong,Kolkata,437.5,8.35,16364.0,road,0
+Chittagong,Kolkata,451.7,9.44,19327.0,road,0
+Bangkok,Jakarta,2438.4,4.87,314629.0,air,0
+Chittagong,Yangon,794.9,3.39,117120.0,air,0
+Port Blair,Chittagong,1627.5,64.97,24923.0,sea,0
+Chittagong,Yangon,1145.4,64.41,19908.0,sea,0
+Dhaka,Jakarta,3901.5,7.91,452588.0,air,0
+Chittagong,Kolkata,524.6,31.47,11501.0,sea,0
+Khulna,Kolkata,166.0,3.94,6757.0,road,0
+Khulna,Kolkata,154.0,3.33,7133.0,road,0
+Port Blair,Singapore,2115.7,88.88,42717.0,sea,0
+Yangon,Kuala Lumpur,2245.8,87.12,39536.0,sea,0
+Port Blair,Chittagong,1221.3,3.6,169775.0,air,0
+Chittagong,Singapore,2764.8,4.85,403194.0,air,0
+Yangon,Kuala Lumpur,2426.2,100.71,39314.0,sea,0
+Bangkok,Singapore,1487.8,4.39,205009.0,air,0
+Jakarta,Singapore,1313.4,54.87,26314.0,sea,0
+Khulna,Chittagong,314.9,6.75,15202.0,road,0
+Chittagong,Kuala Lumpur,2406.1,4.13,248932.0,air,0
+Chittagong,Yangon,906.5,17.35,33111.0,road,0
+Chittagong,Khulna,306.2,17.32,6840.0,sea,0
+Chittagong,Yangon,1106.2,51.4,15527.0,sea,0
+Chittagong,Kolkata,425.2,8.0,16177.0,road,0
+Dhaka,Kolkata,259.5,1.7,41479.0,air,0
+Port Blair,Kolkata,1356.6,4.08,174997.0,air,0
+Bangkok,Port Blair,903.5,3.99,117173.0,air,0
+Bangkok,Kuala Lumpur,1597.7,31.24,72360.0,road,0
+Kolkata,Yangon,1277.8,24.0,52043.0,road,0
+Bangkok,Jakarta,2419.7,4.82,278088.0,air,0
+Port Blair,Chittagong,1221.3,3.6,169775.0,air,0
+Bangkok,Singapore,1441.1,4.27,161360.0,air,0
+Chittagong,Kolkata,436.3,8.46,19291.0,road,0
+Bangkok,Singapore,1482.0,3.7,214040.0,air,0
+Chittagong,Yangon,783.8,2.96,103503.0,air,0
+Port Blair,Kolkata,1350.9,4.11,184116.0,air,0
+Bangkok,Kuala Lumpur,1494.1,69.2,24399.0,sea,0
+Port Blair,Singapore,1675.6,3.57,202551.0,air,0
+Yangon,Kuala Lumpur,2181.9,107.34,33713.0,sea,0
+Kolkata,Singapore,2926.8,6.06,390594.0,air,0
+Yangon,Kuala Lumpur,1703.6,4.77,244464.0,air,0
+Kolkata,Bangkok,1673.1,4.09,248087.0,air,0
+Chittagong,Bangkok,1387.4,3.55,201788.0,air,0
+Kolkata,Port Blair,1674.2,92.96,30372.0,sea,0
+Dhaka,Yangon,985.3,2.89,113946.0,air,0
+Kolkata,Yangon,1378.5,27.32,55380.0,road,0
+Chittagong,Dhaka,319.1,15.39,6271.0,sea,0
+Chittagong,Bangkok,1340.5,3.84,155229.0,air,0
+Chittagong,Yangon,1014.3,42.0,18651.0,sea,1
+Chittagong,Singapore,2719.0,6.01,362177.0,air,0
+Kuala Lumpur,Jakarta,1594.6,65.42,33962.0,sea,0
+Port Blair,Singapore,1731.2,3.77,214746.0,air,0
+Port Blair,Yangon,721.9,2.9,113739.0,air,0
+Kolkata,Port Blair,1689.4,82.75,34223.0,sea,0
+Dhaka,Bangkok,1584.8,3.44,165576.0,air,0
+Chittagong,Kolkata,444.2,21.09,11269.0,sea,0
+Chittagong,Yangon,988.8,20.83,45593.0,road,0
+Kolkata,Bangkok,1641.0,3.61,227867.0,air,0
+Dhaka,Chittagong,221.1,2.02,31931.0,air,0
+Port Blair,Chittagong,1233.5,3.57,184994.0,air,0
+Yangon,Chittagong,1008.8,19.06,42599.0,road,0
+Chittagong,Kolkata,353.7,2.0,55672.0,air,0
+Chittagong,Singapore,2687.2,5.45,305583.0,air,0
+Kolkata,Bangkok,1661.7,4.76,212039.0,air,0
+Jakarta,Kuala Lumpur,1592.0,81.42,30149.0,sea,0
+Port Blair,Kuala Lumpur,1412.3,3.54,206705.0,air,0
+Kuala Lumpur,Singapore,323.9,1.73,47136.0,air,0
+Kolkata,Singapore,3029.7,5.46,323553.0,air,0
+Dhaka,Khulna,178.5,4.92,7795.0,road,0
+Kolkata,Bangkok,1616.8,4.41,188186.0,air,0
+Dhaka,Singapore,2899.1,6.06,356895.0,air,0
+Khulna,Kolkata,146.8,3.81,7219.0,road,0
+Dhaka,Kolkata,305.2,6.76,13997.0,road,0
+Chittagong,Yangon,1030.2,17.77,37793.0,road,0
+Kuala Lumpur,Jakarta,1245.6,3.87,162621.0,air,0
+Khulna,Kolkata,167.3,3.94,8529.0,road,0
+Dhaka,Singapore,2938.2,5.51,358045.0,air,0
+Dhaka,Chittagong,215.7,2.71,36097.0,air,0
+Khulna,Kolkata,166.4,3.84,7877.0,road,0
+Kolkata,Chittagong,363.4,1.91,64470.0,air,0
+Dhaka,Kolkata,260.7,1.72,37499.0,air,0
+Port Blair,Chittagong,1721.6,81.9,23664.0,sea,0
+Dhaka,Chittagong,280.6,14.35,7294.0,sea,0
+Kuala Lumpur,Singapore,309.4,2.11,47539.0,air,0
+Kuala Lumpur,Jakarta,1548.2,82.24,25385.0,sea,0
+Kolkata,Bangkok,1614.7,3.37,180456.0,air,0
+Khulna,Chittagong,299.4,16.07,5147.0,sea,0
+Dhaka,Singapore,2899.9,6.34,328221.0,air,0
+Dhaka,Yangon,1012.7,3.36,115030.0,air,0
+Dhaka,Chittagong,276.8,6.0,11130.0,road,0
+Kolkata,Yangon,1261.9,23.33,53049.0,road,0
+Yangon,Chittagong,1085.4,45.14,23219.0,sea,0
+Kolkata,Yangon,1498.7,76.61,29708.0,sea,0
+Chittagong,Singapore,2680.6,5.61,366627.0,air,0
+Chittagong,Kolkata,408.0,7.78,17336.0,road,0
+Port Blair,Kolkata,1658.1,74.96,32997.0,sea,0
+Kolkata,Singapore,2982.9,6.36,324569.0,air,0
+Chittagong,Kuala Lumpur,2394.6,4.94,267186.0,air,0
+Chittagong,Yangon,892.6,16.06,29855.0,road,0
+Yangon,Kuala Lumpur,1654.2,3.84,199550.0,air,0
+Kolkata,Chittagong,448.9,9.06,16775.0,road,0
+Kuala Lumpur,Singapore,322.3,1.99,53138.0,air,0
+Dhaka,Khulna,171.2,3.58,6824.0,road,0
+Port Blair,Bangkok,1298.2,54.28,24716.0,sea,0
+Dhaka,Chittagong,268.5,14.82,5616.0,sea,0
+Singapore,Port Blair,1679.1,2.98,219655.0,air,0
+Khulna,Chittagong,277.7,5.47,13687.0,road,0
+Dhaka,Khulna,185.6,4.4,8395.0,road,0
+Kuala Lumpur,Singapore,314.1,2.88,44988.0,air,0
+Chittagong,Kolkata,444.2,21.09,11269.0,sea,0
+Dhaka,Kuala Lumpur,2619.2,5.89,267753.0,air,0
+Khulna,Kolkata,162.7,3.55,7482.0,road,0
+Chittagong,Kuala Lumpur,2454.9,4.87,268222.0,air,0
+Port Blair,Singapore,2355.8,114.2,44452.0,sea,0
+Chittagong,Yangon,1096.0,56.07,20022.0,sea,0
+Yangon,Port Blair,939.7,42.23,16906.0,sea,0
+Yangon,Bangkok,681.3,14.38,30287.0,road,0
+Khulna,Chittagong,274.1,5.05,10830.0,road,0
+Chittagong,Yangon,1051.7,42.81,21694.0,sea,0
+Dhaka,Jakarta,3847.5,6.97,504083.0,air,0
+Dhaka,Chittagong,284.2,14.27,6400.0,sea,1
+Dhaka,Kolkata,358.0,18.15,8564.0,sea,0
+Yangon,Bangkok,763.4,14.88,29246.0,road,0
+Kolkata,Singapore,2964.4,5.65,410027.0,air,0
+Chittagong,Kolkata,420.7,8.52,16181.0,road,0
+Kolkata,Yangon,1081.5,3.78,118215.0,air,0
+Chittagong,Yangon,767.9,3.18,94392.0,air,0
+Kolkata,Singapore,2905.2,5.78,414587.0,air,0
+Port Blair,Bangkok,1252.6,50.33,24143.0,sea,0
+Dhaka,Yangon,983.1,3.59,147369.0,air,0
+Chittagong,Kolkata,413.7,7.89,18445.0,road,0
+Port Blair,Kuala Lumpur,1388.9,4.2,145290.0,air,0
+Yangon,Kuala Lumpur,1661.7,3.76,243514.0,air,0
+Chittagong,Yangon,985.4,43.79,15129.0,sea,0
+Chittagong,Yangon,906.5,17.35,33111.0,road,0
+Chittagong,Yangon,803.0,3.11,115016.0,air,0
+Dhaka,Chittagong,272.3,5.07,11013.0,road,0
+Kolkata,Yangon,1040.4,3.69,117168.0,air,0
+Bangkok,Kuala Lumpur,1214.4,3.08,141742.0,air,0
+Khulna,Chittagong,291.9,5.81,11365.0,road,0
+Yangon,Kuala Lumpur,1645.1,3.7,195633.0,air,0
+Port Blair,Kolkata,1308.9,3.22,145907.0,air,0
+Kolkata,Singapore,2990.2,5.52,416547.0,air,0
+Yangon,Kolkata,1498.7,77.07,30553.0,sea,0
+Chittagong,Kolkata,494.4,23.86,9322.0,sea,0
+Dhaka,Chittagong,224.4,1.38,42932.0,air,0
+Kolkata,Kuala Lumpur,2606.9,4.6,328886.0,air,0
+Kolkata,Singapore,2913.7,4.5,426340.0,air,0
+Port Blair,Kolkata,1332.2,2.75,170474.0,air,0
+Chittagong,Port Blair,1220.5,3.4,143622.0,air,0
+Port Blair,Singapore,1710.8,4.29,209716.0,air,0
+Chittagong,Yangon,1120.4,55.85,20325.0,sea,1
+Dhaka,Chittagong,272.8,14.51,7261.0,sea,0
+Chittagong,Bangkok,1374.2,4.0,171429.0,air,0
+Kolkata,Kuala Lumpur,2669.4,4.71,334937.0,air,0
+Chittagong,Singapore,2707.9,5.78,370880.0,air,0
+Dhaka,Khulna,185.9,4.91,9864.0,road,0
+Port Blair,Bangkok,1142.6,58.85,16864.0,sea,0
+Khulna,Chittagong,330.7,20.82,6708.0,sea,0
+Dhaka,Chittagong,220.5,1.34,34886.0,air,0
+Dhaka,Kolkata,260.7,1.52,41630.0,air,1
+Bangkok,Kuala Lumpur,1221.1,3.42,144394.0,air,0
+Dhaka,Yangon,1007.1,2.61,140906.0,air,0
+Port Blair,Kolkata,1359.0,3.37,182667.0,air,1
+Yangon,Kuala Lumpur,1718.9,4.06,258394.0,air,0
+Yangon,Kuala Lumpur,1666.0,4.92,197950.0,air,0
+Kuala Lumpur,Jakarta,1627.5,93.33,23539.0,sea,0
+Chittagong,Yangon,1043.4,55.75,16847.0,sea,0
+Dhaka,Yangon,985.8,2.67,133601.0,air,0
+Chittagong,Bangkok,1358.6,3.19,204723.0,air,0
+Dhaka,Jakarta,3849.1,6.59,493147.0,air,0
+Port Blair,Kuala Lumpur,1865.2,93.7,30942.0,sea,0
+Yangon,Kuala Lumpur,2111.7,118.82,35595.0,sea,0
+Kuala Lumpur,Singapore,414.3,25.87,6835.0,sea,0
+Bangkok,Singapore,1443.7,4.49,204514.0,air,0
+Dhaka,Khulna,160.5,3.06,8909.0,road,0
+Kolkata,Port Blair,1328.4,3.18,207822.0,air,0
+Dhaka,Yangon,1020.8,2.89,137115.0,air,0
+Chittagong,Yangon,791.0,3.54,107743.0,air,0
+Chittagong,Singapore,2706.8,4.94,398729.0,air,0
+Kuala Lumpur,Jakarta,1613.6,90.05,23379.0,sea,0
+Bangkok,Jakarta,2405.7,5.14,307632.0,air,0
+Dhaka,Chittagong,261.1,5.05,11556.0,road,0
+Chittagong,Bangkok,1387.4,3.55,201788.0,air,0
+Yangon,Singapore,2817.3,113.49,48609.0,sea,0
+Chittagong,Kuala Lumpur,2447.2,5.17,333144.0,air,0
+Port Blair,Bangkok,1199.3,63.79,24990.0,sea,0
+Chittagong,Kolkata,367.1,2.8,45011.0,air,0
+Chittagong,Kuala Lumpur,2414.1,5.08,346183.0,air,0
+Port Blair,Yangon,1019.2,43.03,19742.0,sea,0
+Chittagong,Bangkok,1382.7,4.24,180522.0,air,0
+Dhaka,Chittagong,318.2,18.57,7182.0,sea,1
+Yangon,Port Blair,1033.8,47.24,19251.0,sea,0
+Kolkata,Port Blair,1935.6,102.54,28344.0,sea,0
+Chittagong,Port Blair,1255.9,3.86,144560.0,air,0
+Kolkata,Yangon,1047.6,3.0,135247.0,air,0
+Khulna,Chittagong,285.8,6.46,10514.0,road,0
+Dhaka,Kuala Lumpur,2658.0,5.6,371863.0,air,0
+Singapore,Jakarta,1157.6,51.53,21660.0,sea,0
+Chittagong,Yangon,1033.8,42.76,18446.0,sea,0
+Dhaka,Jakarta,3829.1,6.4,509917.0,air,0
+Chittagong,Yangon,1101.8,59.44,19158.0,sea,1
+Khulna,Chittagong,318.9,7.26,14496.0,road,0
+Port Blair,Singapore,1679.1,3.04,220153.0,air,0
+Kolkata,Bangkok,1676.2,3.79,218250.0,air,0
+Kolkata,Port Blair,1768.9,87.9,36284.0,sea,0
+Dhaka,Kolkata,332.7,7.98,14408.0,road,0
+Dhaka,Kuala Lumpur,2672.9,6.42,397919.0,air,0
+Chittagong,Yangon,1054.0,41.54,15882.0,sea,0
+Yangon,Bangkok,757.2,42.82,13522.0,sea,0
+Khulna,Kolkata,166.1,4.32,6710.0,road,0
+Kolkata,Port Blair,1837.1,90.24,26965.0,sea,0
+Chittagong,Yangon,908.6,15.93,34922.0,road,0
+Chittagong,Yangon,770.6,2.31,89033.0,air,0
+Kolkata,Yangon,1422.8,60.52,22253.0,sea,0
+Chittagong,Singapore,2690.0,5.57,288368.0,air,0
+Kuala Lumpur,Jakarta,1236.9,3.01,131479.0,air,0
+Chittagong,Singapore,2722.8,5.05,310800.0,air,0
+Port Blair,Singapore,1685.9,3.59,178260.0,air,0
+Chittagong,Singapore,2775.9,6.14,282236.0,air,0
+Port Blair,Yangon,989.7,40.62,20538.0,sea,0
+Dhaka,Chittagong,276.7,5.47,12349.0,road,0
+Khulna,Chittagong,324.1,21.34,6693.0,sea,0
+Chittagong,Kolkata,467.6,27.67,9747.0,sea,0
+Chittagong,Yangon,988.8,20.83,45593.0,road,0
+Dhaka,Singapore,2989.5,6.07,309512.0,air,0
+Chittagong,Singapore,2772.6,6.06,378266.0,air,0
+Bangkok,Jakarta,2442.9,4.19,288123.0,air,0
+Dhaka,Bangkok,1591.5,3.36,193411.0,air,0
+Chittagong,Yangon,979.8,17.07,38275.0,road,0
+Yangon,Chittagong,1046.6,58.93,20407.0,sea,0
+Chittagong,Kuala Lumpur,2465.9,4.92,287558.0,air,0
+Dhaka,Singapore,3007.2,6.22,381613.0,air,0
+Dhaka,Yangon,999.4,3.84,153593.0,air,0
+Kuala Lumpur,Jakarta,1752.3,67.88,35920.0,sea,0
+Kolkata,Bangkok,1635.3,3.67,236352.0,air,0
+Chittagong,Port Blair,1255.9,3.86,144560.0,air,0
+Kuala Lumpur,Singapore,363.0,6.83,17798.0,road,0
+Dhaka,Chittagong,220.5,1.34,34886.0,air,0
+Port Blair,Kolkata,1328.4,3.04,198302.0,air,0
+Dhaka,Chittagong,255.8,5.45,10213.0,road,0
+Port Blair,Chittagong,1721.6,81.9,23664.0,sea,0
+Chittagong,Singapore,2736.9,5.09,277971.0,air,0
+Kolkata,Kuala Lumpur,2619.8,4.85,379896.0,air,0
+Khulna,Chittagong,350.1,17.11,7258.0,sea,0
+Port Blair,Kuala Lumpur,1779.8,100.29,29298.0,sea,0
+Khulna,Chittagong,291.2,5.76,13494.0,road,0
+Chittagong,Kuala Lumpur,2437.1,4.59,292158.0,air,0
+Dhaka,Jakarta,3803.0,5.6,500277.0,air,0
+Jakarta,Dhaka,3947.4,7.15,437824.0,air,0
+Yangon,Kuala Lumpur,2377.3,119.2,45421.0,sea,0
+Dhaka,Khulna,178.7,4.56,8131.0,road,0
+Bangkok,Kuala Lumpur,1246.2,3.4,153016.0,air,0
+Kolkata,Kuala Lumpur,2642.6,5.9,275455.0,air,0
+Singapore,Jakarta,916.9,2.4,113932.0,air,0
+Chittagong,Kolkata,504.3,27.03,7067.0,sea,0
+Chittagong,Kolkata,430.1,9.15,19496.0,road,0
+Chittagong,Yangon,1101.8,59.44,19158.0,sea,1
+Chittagong,Yangon,1003.4,58.24,19245.0,sea,0
+Dhaka,Kolkata,332.1,7.12,13838.0,road,0
+Khulna,Chittagong,312.6,6.52,11304.0,road,0
+Khulna,Chittagong,332.1,21.4,6460.0,sea,0
+Chittagong,Kolkata,447.5,9.04,20570.0,road,0
+Khulna,Kolkata,167.6,3.73,8783.0,road,0
+Port Blair,Chittagong,1233.5,3.57,184994.0,air,0
+Singapore,Jakarta,1193.8,54.34,18230.0,sea,0
+Dhaka,Chittagong,221.1,2.02,31931.0,air,0
+Chittagong,Singapore,2687.3,5.37,299544.0,air,0
+Kolkata,Singapore,3030.6,6.58,333097.0,air,0
+Yangon,Kuala Lumpur,1680.2,4.7,250861.0,air,0
+Port Blair,Singapore,1684.2,4.35,248314.0,air,1
+Kolkata,Kuala Lumpur,2670.0,5.35,334130.0,air,0
+Yangon,Bangkok,739.6,42.34,11659.0,sea,0
+Chittagong,Kuala Lumpur,2399.7,5.0,246756.0,air,0
+Jakarta,Bangkok,3264.8,165.51,57138.0,sea,0
+Dhaka,Yangon,1000.6,2.93,135361.0,air,0
+Kuala Lumpur,Bangkok,1750.3,73.39,25970.0,sea,0
+Kolkata,Kuala Lumpur,2690.1,5.77,378450.0,air,0
+Chittagong,Kolkata,468.0,29.94,8887.0,sea,0
+Port Blair,Chittagong,1208.5,3.06,154665.0,air,0
+Chittagong,Kolkata,367.1,2.8,45011.0,air,0
+Chittagong,Yangon,1085.4,44.44,22914.0,sea,0
+Chittagong,Bangkok,1384.2,4.01,148469.0,air,0
+Port Blair,Kuala Lumpur,1757.3,79.67,24473.0,sea,0
+Dhaka,Singapore,2912.4,5.9,358296.0,air,0
+Chittagong,Singapore,2714.0,4.52,292299.0,air,1
+Dhaka,Chittagong,292.1,14.5,5713.0,sea,0
+Khulna,Kolkata,154.4,3.13,7722.0,road,0
+Chittagong,Yangon,989.2,50.32,13922.0,sea,1
+Chittagong,Kuala Lumpur,2466.7,4.87,261592.0,air,0
+Kuala Lumpur,Singapore,395.3,23.65,9127.0,sea,0
+Khulna,Chittagong,303.4,6.42,14278.0,road,0
+Khulna,Chittagong,336.6,15.99,8849.0,sea,0
+Chittagong,Yangon,1128.7,48.06,23235.0,sea,0
+Port Blair,Singapore,1675.2,4.55,239267.0,air,0
+Dhaka,Singapore,2983.5,4.86,418791.0,air,0
+Chittagong,Bangkok,1338.9,2.93,173588.0,air,0
+Yangon,Bangkok,678.5,12.33,25295.0,road,0
+Dhaka,Chittagong,276.7,5.47,12349.0,road,0
+Kuala Lumpur,Jakarta,1592.0,79.79,31561.0,sea,0
+Dhaka,Yangon,986.2,2.95,145513.0,air,0
+Chittagong,Dhaka,318.2,17.82,6923.0,sea,0
+Kolkata,Chittagong,353.0,2.52,55907.0,air,0
+Port Blair,Kuala Lumpur,1835.8,100.73,29607.0,sea,0
+Dhaka,Singapore,2994.1,6.89,396065.0,air,0
+Port Blair,Kuala Lumpur,1376.9,4.08,145808.0,air,0
+Kolkata,Chittagong,522.3,24.98,10887.0,sea,0
+Port Blair,Kuala Lumpur,2009.1,81.19,32150.0,sea,0
+Chittagong,Bangkok,1376.6,3.82,185897.0,air,0
+Dhaka,Chittagong,254.6,6.26,11315.0,road,0
+Bangkok,Singapore,1442.4,3.74,152924.0,air,0
+Port Blair,Kuala Lumpur,1372.3,2.8,208295.0,air,0
+Chittagong,Kuala Lumpur,2430.4,5.98,273789.0,air,0
+Dhaka,Kolkata,371.1,17.46,6764.0,sea,0
+Kuala Lumpur,Jakarta,1232.8,3.95,154717.0,air,0
+Chittagong,Singapore,2679.3,5.09,386719.0,air,0
+Chittagong,Singapore,2725.0,5.26,287481.0,air,0
+Khulna,Chittagong,323.4,16.9,6789.0,sea,0
+Port Blair,Kuala Lumpur,1382.8,2.88,207936.0,air,0
+Chittagong,Kolkata,453.7,25.71,10364.0,sea,0
+Chittagong,Kolkata,442.7,8.23,17410.0,road,0
+Port Blair,Singapore,2318.7,98.02,40544.0,sea,0
+Kuala Lumpur,Singapore,311.0,2.59,46528.0,air,0
+Chittagong,Yangon,1096.0,56.07,20022.0,sea,0
+Chittagong,Kolkata,522.3,24.68,11436.0,sea,0
+Port Blair,Kuala Lumpur,1403.2,3.74,183977.0,air,0
+Dhaka,Kuala Lumpur,2715.0,5.07,321591.0,air,0
+Bangkok,Jakarta,2443.7,4.2,347574.0,air,0
+Bangkok,Singapore,1479.0,3.97,194765.0,air,0
+Khulna,Chittagong,279.9,5.04,12842.0,road,0
+Kolkata,Dhaka,251.1,2.61,45229.0,air,0
+Port Blair,Chittagong,1247.1,3.43,132888.0,air,0
+Chittagong,Bangkok,1391.9,3.69,154589.0,air,1
+Chittagong,Singapore,2690.0,5.57,288368.0,air,0
+Kolkata,Yangon,1043.9,3.89,159719.0,air,0
+Dhaka,Kuala Lumpur,2657.3,4.55,344119.0,air,0
+Chittagong,Bangkok,1349.1,3.05,170464.0,air,1
+Chittagong,Singapore,2679.3,5.09,386719.0,air,0
+Port Blair,Singapore,1733.9,3.52,181363.0,air,0
+Dhaka,Bangkok,1608.2,3.72,190680.0,air,0
+Dhaka,Chittagong,255.2,5.27,12336.0,road,1
+Kolkata,Yangon,1067.1,2.71,153577.0,air,0
+Yangon,Singapore,2412.0,108.48,40282.0,sea,0
+Dhaka,Khulna,167.9,3.69,7650.0,road,0
+Kolkata,Chittagong,522.3,24.98,10887.0,sea,0
+Port Blair,Kuala Lumpur,1374.2,3.79,179259.0,air,0
+Chittagong,Kolkata,356.7,2.64,50455.0,air,0
+Chittagong,Kolkata,525.9,27.4,8949.0,sea,0
+Port Blair,Chittagong,1508.1,81.35,31450.0,sea,0
+Khulna,Chittagong,309.7,6.29,13687.0,road,0
+Chittagong,Yangon,1014.3,42.0,18651.0,sea,1
+Kolkata,Kuala Lumpur,2667.9,4.26,290624.0,air,0
+Dhaka,Yangon,987.9,2.5,122038.0,air,0
+Chittagong,Yangon,979.8,17.07,38275.0,road,0
+Chittagong,Yangon,1090.5,63.69,20569.0,sea,0
+Chittagong,Bangkok,1384.2,4.01,148469.0,air,0
+Dhaka,Jakarta,3886.8,7.13,550046.0,air,0
+Khulna,Chittagong,303.3,21.31,6917.0,sea,0
+Chittagong,Yangon,961.0,18.69,37586.0,road,0
+Kolkata,Port Blair,1921.7,76.6,35175.0,sea,0
+Singapore,Jakarta,939.6,3.66,118993.0,air,0
+Kolkata,Yangon,1204.2,21.04,50096.0,road,0
+Chittagong,Kuala Lumpur,2461.0,5.33,252707.0,air,0
+Khulna,Kolkata,164.7,4.35,7350.0,road,0
+Bangkok,Kuala Lumpur,1383.5,27.85,55840.0,road,0
+Chittagong,Bangkok,1339.8,3.96,175184.0,air,0
+Bangkok,Kuala Lumpur,1234.3,3.95,139295.0,air,0
+Yangon,Singapore,2749.8,107.65,51535.0,sea,0
+Chittagong,Singapore,2707.9,5.78,370880.0,air,0
+Chittagong,Yangon,1113.9,58.78,23588.0,sea,0
+Chittagong,Kolkata,463.1,22.77,7435.0,sea,0
+Port Blair,Singapore,1679.1,4.88,231312.0,air,1
+Port Blair,Chittagong,1684.0,68.37,30286.0,sea,0
+Chittagong,Kolkata,462.4,26.9,8969.0,sea,0
+Khulna,Chittagong,312.5,19.72,8343.0,sea,0
+Kolkata,Singapore,2939.8,4.81,381634.0,air,1
+Yangon,Port Blair,708.4,2.47,87540.0,air,0
+Chittagong,Kolkata,490.8,29.73,9145.0,sea,0
+Chittagong,Yangon,1120.4,55.85,20325.0,sea,1
+Kolkata,Bangkok,1629.3,3.32,229021.0,air,0
+Chittagong,Yangon,783.8,2.96,103503.0,air,0
+Port Blair,Chittagong,1202.6,2.64,160838.0,air,1
+Dhaka,Chittagong,217.2,1.63,38884.0,air,0
+Chittagong,Kolkata,525.8,24.42,10899.0,sea,0
+Dhaka,Chittagong,263.6,5.63,12329.0,road,0
+Chittagong,Singapore,2706.8,4.94,398729.0,air,0
+Bangkok,Yangon,580.8,3.04,81894.0,air,0
+Dhaka,Khulna,162.0,3.00,6950.0,road,0
+Khulna,Kolkata,150.0,2.90,6200.0,road,0
