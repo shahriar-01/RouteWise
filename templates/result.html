@@ -205,10 +205,10 @@
                 </div>
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-top:1rem; font-size:0.85rem; color:var(--text-secondary);">
                     <div>Total Payment Received: <strong style="color:#f9fafb;">BDT {{ "{:,.0f}".format(results.financial.revenue) }}</strong></div>
-                    <div>Recovery Budget: <strong style="color:{% if results.financial.budget_exceeds_payment %}#ef4444{% else %}#f9fafb{% endif %};">BDT {{ "{:,.0f}".format(results.financial.recovery_budget_bdt or results.shipment.recovery_budget_bdt|float) }}</strong>{% if results.financial.budget_exceeds_payment %} <span style="color:#ef4444;">✕ exceeds payment</span>{% else %} ✓ ≤ payment{% endif %}</div>
+                    <div>Recovery Budget: <strong style="color:{% if results.financial.budget_exceeds_payment %}#ef4444{% else %}#f9fafb{% endif %};">BDT {{ "{:,.0f}".format(results.financial.recovery_budget_bdt or results.shipment.recovery_budget_bdt|float) }}</strong>{% if results.financial.budget_exceeds_payment %} <span style="color:#ef4444;">✕ exceeds payment</span>{% else %} {% endif %}</div>
                 </div>
                 <div class="profit-indicator {% if results.financial.final_profit>=0 %}positive{% else %}negative{% endif %}">
-                    {% if results.financial.final_profit>=0 %}✓ Profitable recovery — Revenue exceeds all costs{% else %}✕ Net loss on this shipment — consider recommendations above{% endif %}
+                    {% if results.financial.final_profit>=0 %}✓ Profitable {% else %}✕ Net loss on this shipment — consider recommendations above{% endif %}
                 </div>
                 <p style="color:var(--text-secondary); font-size:0.78rem; margin-top:0.7rem; text-align:center;">Formula verified: {{ "{:,.0f}".format(results.financial.revenue) }} − {{ "{:,.0f}".format(results.financial.original_cost) }} − {{ "{:,.0f}".format(results.financial.recovery_cost) }} − {{ "{:,.0f}".format(results.financial.damage_cost) }} − {{ "{:,.0f}".format(results.financial.delay_penalty) }} = {{ "{:,.0f}".format(results.financial.final_profit) }}</p>
             </div>
