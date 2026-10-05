@@ -1,0 +1,11 @@
+location_name,country,x_coord,y_coord,is_port,location_type,latitude,longitude
+Dhaka,Bangladesh,90.4125,23.8103,No,city,23.8103,90.4125
+Khulna,Bangladesh,89.5403,22.8456,No,city,22.8456,89.5403
+Chittagong,Bangladesh,91.7832,22.3569,Yes,port,22.3569,91.7832
+Kolkata,India,88.3639,22.5726,Yes,hub,22.5726,88.3639
+Yangon,Myanmar,96.1951,16.8661,Yes,port,16.8661,96.1951
+Bangkok,Thailand,100.5018,13.7563,Yes,hub,13.7563,100.5018
+Port Blair,India,92.7265,11.6234,Yes,port,11.6234,92.7265
+Kuala Lumpur,Malaysia,101.6869,3.139,Yes,hub,3.139,101.6869
+Singapore,Singapore,103.8198,1.3521,Yes,hub,1.3521,103.8198
+Jakarta,Indonesia,106.8456,-6.2088,Yes,port,-6.2088,106.8456
