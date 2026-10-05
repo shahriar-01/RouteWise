@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Incident - RouteWise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#f59e0b"/><path d="M7 14L12 19L21 9" stroke="#0a0e1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="logo-text">RouteWise</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/shipment" class="nav-link active">Analysis</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container">
+        <div class="progress-bar">
+            <div class="progress-step completed"><span>✓</span><label>Shipment</label></div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step active"><span>2</span><label>Incident</label></div>
+            <div class="progress-line"></div>
+            <div class="progress-step"><span>3</span><label>Analysis</label></div>
+            <div class="progress-line"></div>
+            <div class="progress-step"><span>4</span><label>Result</label></div>
+        </div>
+
+        <div class="form-header">
+            <h1>What Went Wrong?</h1>
+            <p>Select the incident type affecting your shipment</p>
+        </div>
+
+        {% if error %}
+        <div class="alert alert-error">{{ error }}</div>
+        {% endif %}
+
+        {% if shipment %}
+        <div class="card shipment-summary">
+            <h3>Shipment Summary</h3>
+            <div class="summary-grid">
+                <div class="summary-item"><span class="summary-label">Origin</span><span class="summary-value">{{ shipment.origin }}</span></div>
+                <div class="summary-item"><span class="summary-label">Destination</span><span class="summary-value">{{ shipment.destination }}</span></div>
+                <div class="summary-item"><span class="summary-label">Cargo Weight</span><span class="summary-value">{{ "%g"|format(shipment.cargo_weight_tons) }} tons</span></div>
+                <div class="summary-item"><span class="summary-label">Deadline</span><span class="summary-value">{{ shipment.delivery_deadline_days }} days</span></div>
+                <div class="summary-item"><span class="summary-label">Transport</span><span class="summary-value">{{ shipment.transportation_type }}</span></div>
+                <div class="summary-item"><span class="summary-label">Budget</span><span class="summary-value">BDT {{ "{:,.0f}".format(shipment.recovery_budget_bdt | float) }}</span></div>
+            </div>
+        </div>
+        {% endif %}
+
+        <form id="incidentForm" method="POST" action="/analyze">
+            <input type="hidden" name="incident_type" id="incident_type_input" value="">
+            <div class="incident-grid">
+                <div class="card incident-card" data-incident="Road Blocked" tabindex="0">
+                    <div class="incident-icon road">◈</div>
+                    <h3>Road Blocked</h3>
+                    <p>A major highway segment is closed due to construction or accident. Transport cannot use the usual route.</p>
+                    <span class="incident-check">○</span>
+                </div>
+                <div class="card incident-card" data-incident="Vehicle Unavailable" tabindex="0">
+                    <div class="incident-icon vehicle">⬢</div>
+                    <h3>Vehicle Unavailable</h3>
+                    <p>The assigned vehicle broke down or is otherwise unavailable for transport.</p>
+                    <span class="incident-check">○</span>
+                </div>
+                <div class="card incident-card" data-incident="Port Unavailable" tabindex="0">
+                    <div class="incident-icon port">⬣</div>
+                    <h3>Port Unavailable</h3>
+                    <p>Destination or transit port is closed due to weather, strike, or congestion.</p>
+                    <span class="incident-check">○</span>
+                </div>
+                <div class="card incident-card" data-incident="Cargo Damaged" tabindex="0">
+                    <div class="incident-icon cargo">⬔</div>
+                    <h3>Cargo Damaged</h3>
+                    <p>Shipment sustained damage in transit; partial repacking or replacement needed.</p>
+                    <span class="incident-check">○</span>
+                </div>
+                <div class="card incident-card" data-incident="Major Delay" tabindex="0">
+                    <div class="incident-icon delay">⬕</div>
+                    <h3>Major Delay</h3>
+                    <p>Shipment is significantly behind schedule due to cumulative delays.</p>
+                    <span class="incident-check">○</span>
+                </div>
+            </div>
+
+            <div class="form-actions incident-actions">
+                <a href="/shipment" class="btn-secondary">Back</a>
+                <button type="submit" class="btn-primary" id="analyzeBtn" disabled>Analyze →</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

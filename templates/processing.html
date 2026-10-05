@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzing - RouteWise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#f59e0b"/><path d="M7 14L12 19L21 9" stroke="#0a0e1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="logo-text">RouteWise</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/shipment" class="nav-link active">Analysis</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-container processing-page">
+        <div class="progress-bar">
+            <div class="progress-step completed"><span>✓</span><label>Shipment</label></div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step completed"><span>✓</span><label>Incident</label></div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step active"><span>3</span><label>Analysis</label></div>
+            <div class="progress-line"></div>
+            <div class="progress-step"><span>4</span><label>Result</label></div>
+        </div>
+
+        <div class="processing-header">
+            <div class="spinner"></div>
+            <h1>Analyzing Your Shipment</h1>
+            <p>Running four algorithms in sequence — this takes a few seconds</p>
+            {% if shipment and incident_type %}
+            <div class="processing-meta">
+                <span>{{ shipment.origin }} → {{ shipment.destination }}</span>
+                <span class="dot">•</span>
+                <span>{{ incident_type }}</span>
+                <span class="dot">•</span>
+                <span>Budget BDT {{ shipment.recovery_budget_bdt }} / Payment BDT {{ shipment.total_payment_received_bdt }}</span>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="steps-container card">
+            <div class="step-item" id="step1">
+                <div class="step-icon"><span class="step-number">1</span></div>
+                <div class="step-content">
+                    <h4>Generating possible recovery plans...</h4>
+                    <p class="step-detail" id="step1-detail">Creating alternative options for {{ incident_type or 'incident' }} (1000 routes expanded)</p>
+                </div>
+                <div class="step-status" id="step1-status"><span class="status-dot"></span></div>
+            </div>
+
+            <div class="step-item" id="step2">
+                <div class="step-icon"><span class="step-number">2</span></div>
+                <div class="step-content">
+                    <h4>CSP: Checking constraints...</h4>
+                    <p class="step-detail" id="step2-detail">Filtering against capacity, deadline, availability, route and budget ≤ payment</p>
+                </div>
+                <div class="step-status" id="step2-status"><span class="status-dot"></span></div>
+            </div>
+
+            <div class="step-item" id="step3">
+                <div class="step-icon"><span class="step-number">3</span></div>
+                <div class="step-content">
+                    <h4>Dijkstra: Finding lowest-cost route...</h4>
+                    <p class="step-detail" id="step3-detail">Searching graph (incident-aware: Road Blocked avoids same road)</p>
+                </div>
+                <div class="step-status" id="step3-status"><span class="status-dot"></span></div>
+            </div>
+
+            <div class="step-item" id="step4">
+                <div class="step-icon"><span class="step-number">4</span></div>
+                <div class="step-content">
+                    <h4>A*: Finding efficient route...</h4>
+                    <p class="step-detail" id="step4-detail">f(n) = g(n) + h(n) with heuristic toward destination</p>
+                </div>
+                <div class="step-status" id="step4-status"><span class="status-dot"></span></div>
+            </div>
+
+            <div class="step-item" id="step5">
+                <div class="step-icon"><span class="step-number">5</span></div>
+                <div class="step-content">
+                    <h4>Hill Climbing: Deciding between routes...</h4>
+                    <p class="step-detail" id="step5-detail">Relative threshold 5%: ((|CostA−CostB|)/min(CostA,CostB))×100%</p>
+                </div>
+                <div class="step-status" id="step5-status"><span class="status-dot"></span></div>
+            </div>
+
+            <div class="step-item" id="step6">
+                <div class="step-icon"><span class="step-number">6</span></div>
+                <div class="step-content">
+                    <h4>Calculating financial results...</h4>
+                    <p class="step-detail" id="step6-detail">Revenue (Total Payment) − Original − Recovery − Damage − Delay</p>
+                </div>
+                <div class="step-status" id="step6-status"><span class="status-dot"></span></div>
+            </div>
+
+            <div class="step-item" id="step7">
+                <div class="step-icon"><span class="step-number">✓</span></div>
+                <div class="step-content">
+                    <h4>Analysis complete</h4>
+                    <p class="step-detail" id="step7-detail">Ready to view results (budget ≤ payment checked)</p>
+                </div>
+                <div class="step-status" id="step7-status"><span class="status-dot"></span></div>
+            </div>
+        </div>
+
+        <div class="processing-actions">
+            <a href="/result" id="viewResultsBtn" class="btn-primary" style="display:none;">View Results →</a>
+            <p id="processingError" class="field-error" style="display:none; text-align:center; margin-top:16px;"></p>
+        </div>
+    </main>
+
+    <script>
+        window.processingData = {
+            shipment: {{ shipment|tojson if shipment else 'null' }},
+            incident: {{ incident_type|tojson if incident_type else 'null' }}
+        };
+    </script>
+    <script src="static/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof runProcessingPipeline === 'function') {
+                runProcessingPipeline();
+            }
+        });
+    </script>
+</body>
+</html>
