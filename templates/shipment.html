@@ -65,30 +65,30 @@
                 <div class="form-group">
                     <label for="cargo_weight_tons">Cargo Weight (tons) <span class="required">*</span></label>
                     <input type="number" id="cargo_weight_tons" name="cargo_weight_tons" min="1" max="200" step="0.1" inputmode="decimal" placeholder="e.g. 8" value="{% if shipment %}{{ shipment.cargo_weight_tons }}{% endif %}" required>
-                    <small class="helper-text">Range: 1 – 200 tons. Decimals allowed (e.g., 8.5). Heavy cargo needs larger vehicle.</small>
+                    <small class="helper-text"> </small>
                 </div>
                 <div class="form-group">
                     <label for="cargo_value_bdt">Cargo Value (BDT) <span class="required">*</span></label>
                     <input type="text" id="cargo_value_bdt" name="cargo_value_bdt" inputmode="numeric" pattern="[0-9,]*" placeholder="e.g. 5,000,000" value="{% if shipment %}{{ shipment.cargo_value_bdt }}{% endif %}" required autocomplete="off">
-                    <small class="helper-text">Any whole number — recommended 500,000 to 20,000,000 BDT. Commas allowed and will be saved correctly.</small>
+                    <small class="helper-text"> </small>
                 </div>
 
                 <div class="form-group">
                     <label for="original_cost_bdt">Original Transportation Cost (BDT) <span class="required">*</span></label>
                     <input type="text" id="original_cost_bdt" name="original_cost_bdt" inputmode="numeric" pattern="[0-9,]*" placeholder="e.g. 4,000,000" value="{% if shipment %}{{ shipment.original_cost_bdt }}{% endif %}" required autocomplete="off">
-                    <small class="helper-text">Any whole number — typical 100,000 to 5,000,000 BDT. Commas allowed.</small>
+                    <small class="helper-text"> </small>
                 </div>
                 <div class="form-group">
                     <label for="total_payment_received_bdt">Total Payment Received (BDT) <span class="required">*</span></label>
                     <input type="text" id="total_payment_received_bdt" name="total_payment_received_bdt" inputmode="numeric" pattern="[0-9,]*" placeholder="e.g. 6,250,000" value="{% if shipment %}{{ shipment.total_payment_received_bdt }}{% endif %}" required autocomplete="off">
-                    <small class="helper-text">Revenue for delivering shipment — used as Revenue in Final Profit. Typically cargo value ×1.25. Must be ≥ Recovery Budget.</small>
+                    <small class="helper-text"> </small>
                     <span id="paymentHint" class="helper-text" style="color:#10b981; display:none;"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="delivery_deadline_days">Delivery Deadline (days) <span class="required">*</span></label>
                     <input type="number" id="delivery_deadline_days" name="delivery_deadline_days" min="1" max="60" step="1" inputmode="numeric" placeholder="e.g. 5" value="{% if shipment %}{{ shipment.delivery_deadline_days }}{% endif %}" required>
-                    <small class="helper-text">Range: 1 – 60 days. Recovery options must meet this deadline.</small>
+                    <small class="helper-text"> </small>
                 </div>
                 <div class="form-group">
                     <label for="transportation_type">Transportation Type <span class="required">*</span></label>
@@ -98,12 +98,12 @@
                         <option value="Ship" {% if shipment and shipment.transportation_type == 'Ship' %}selected{% endif %}>Ship</option>
                         <option value="Aircraft" {% if shipment and shipment.transportation_type == 'Aircraft' %}selected{% endif %}>Aircraft</option>
                     </select>
-                    <small class="helper-text">Primary vehicle type — now includes Aircraft for air routes.</small>
+                    <small class="helper-text"> </small>
                 </div>
                 <div class="form-group">
                     <label for="recovery_budget_bdt">Recovery Budget (BDT) *</label>
                     <input type="text" id="recovery_budget_bdt" name="recovery_budget_bdt" inputmode="numeric" pattern="[0-9,]*" placeholder="e.g. 100,000" value="{% if shipment %}{{ shipment.recovery_budget_bdt }}{% endif %}" required autocomplete="off">
-                    <small class="helper-text">Any whole number — suggested 30,000 to 300,000 BDT. Commas allowed; stays saved when you click next field.</small>
+                    <small class="helper-text"> </small>
                     <span id="budgetWarning" class="field-error" style="display:none; color:#f59e0b; font-weight:700;"></span>
                     <span id="budgetHint" class="helper-text" style="display:none; color:#10b981;"></span>
                 </div>
@@ -113,7 +113,7 @@
                 <a href="/" class="btn-secondary">Back to Home</a>
                 <button type="submit" class="btn-primary" id="continueBtn">Continue →</button>
             </div>
-            <p style="text-align:center; color:var(--text-secondary); font-size:0.78rem; margin-top:1rem;">Example valid set: Dhaka → Singapore, 8 tons, 5,000,000 value, 4,000,000 cost, 6,250,000 payment, 5 days, Truck, 100,000 budget — always yields feasible options due to expanded route/vehicle data.</p>
+            <p style="text-align:center; color:var(--text-secondary); font-size:0.78rem; margin-top:1rem;"> </p>
         </form>
     </main>
 
